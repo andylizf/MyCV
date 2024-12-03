@@ -23,15 +23,15 @@
 
 = Research Interests
 
-Aspiring AI systems researcher seeking opportunities to innovate in machine learning systems and cloud computing, leveraging my background in computer systems and software development to contribute to cutting-edge systems for AI projects.
+AI systems researcher driving innovation in machine learning infrastructure and cloud computing, leveraging systems expertise to architect and optimize next-generation AI platforms and distributed systems.
 
 = Education
 
 #resume-entry(
   title: "University of California, Berkeley",
   location: "Berkeley, CA, USA",
-  date: "August 2024 - December 2024",
-  description: "Exchange Student, Computer Science",
+  date: "August 2024 - Present",
+  description: "Exchange Student, Computer Science (Ongoing)",
 )
 
 #resume-item[
@@ -42,7 +42,7 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
   title: "Renmin University of China",
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
-  description: "Bachelor’s in Computer Science",
+  description: "Bachelor's in Computer Science",
 )
 
 #resume-item[
@@ -66,7 +66,7 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 #resume-entry(
   title: "Research Intern",
   location: "University of California, Berkeley",
-  date: "September 2024 - December 2024",
+  date: "September 2024 - Present",
   description: "Sky Computing Lab, UCB"
 )
 
@@ -115,28 +115,40 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 
 = Honors and Awards
 
-#resume-entry(
+#let resume-award-entry(
+  title: "",
+  organization: "",
+  date: "",
+) = {
+  resume-entry(
+    title: title,
+    date: date,
+    description: organization,
+  )
+}
+
+#resume-award-entry(
   title: "National Scholarship",
   date: "September 2024",
-  description: "Ministry of Education (China)",
+  organization: "Ministry of Education (China)",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "First Place, Computer Comprehensive Ability Competition (Systems Track)",
   date: "May 2024",
-  description: "Renmin University of China",
+  organization: "Renmin University of China",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "First-Class Scholarship for Social Work and Volunteer Service",
   date: "September 2023",
-  description: "Renmin University of China",
+  organization: "Renmin University of China",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "First Prize, National Olympiad in Informatics in Provinces (NOIP), China",
   date: "December 2019",
-  description: "China Computer Federation",
+  organization: "China Computer Federation",
 )
 
 = Projects
@@ -148,47 +160,59 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 )
 
 #resume-item[
-  - Architected scalable full-stack platform with Vue.js, Nest.js and Spring Boot, featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU
+  - Architected scalable full-stack platform featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU
   // - Developed a university-wide platform integrating AI for enhanced learning and knowledge sharing
   // - Facilitating efficient academic resource management and interactive communication for students and faculty
 ]
 
-#linebreak()
-
-= Publications
-
-#label("checkpoint")
-#resume-publication(
-  title: "Checkpoint: A Tool for Supporting Terminal-Based Capture-the-Flag Assessments",
-  authors: [Connor Bernard\*, Melissa Fabros\*, #strong("Zhifei Li*"), Narges Norouzi, Daniel Garcia, Armando Fox],
-  venue: "Acm Sigcse 2025 Poster",
+#resume-entry(
+  title: "SkyPilot: Run AI on Any Infra",
+  location: github-link("skypilot-org/skypilot"),
+  date: "September 2024 - Present",
+  description: "Framework for running ML/AI workloads across any cloud infrastructure",
 )
-
 #resume-item[
-  - Developed a pedagogy-driven assessment framework enabling progressive learning through interactive terminal missions, implemented with Docker-based validation system
+  - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components
+  - Enhanced system reliability through comprehensive testing and bug fixes
+  - Actively participated in weekly dev meetings and community engagement
 ]
 
-= Skills
+// #linebreak()
 
-#resume-skill-item(
-  "Coding",
-  (strong("C++"), strong("Python"), strong("CUDA"), "Rust", "Typescript", "PyTorch"),
-)
-#resume-skill-item(
-  "Technical",
-  (strong("Distributed Systems"), strong("Parallel Computing"), "Performance Optimization", "Cloud Infrastructure", "Open-Source Project Development")
-)
-#resume-skill-item(
-  "Laboratory",
-  ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring")
-)
-#resume-skill-item(
-  "Languages",
-  ("English (TOEFL 104)", "Chinese (native)")
-)
+// = Publications
 
-#resume-skill-item(
-  "Soft Skills",
-  ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation")
-)
+// #label("checkpoint")
+// #resume-publication(
+//   title: "Checkpoint: A Tool for Supporting Terminal-Based Capture-the-Flag Assessments",
+//   authors: [Connor Bernard\*, Melissa Fabros\*, #strong("Zhifei Li*"), Narges Norouzi, Daniel Garcia, Armando Fox],
+//   venue: "Acm Sigcse 2025 Poster",
+// )
+
+// #resume-item[
+//   - Developed a pedagogy-driven assessment framework enabling progressive learning through interactive terminal missions, implemented with Docker-based validation system
+// ]
+
+// = Skills
+
+// #resume-skill-item(
+//   "Coding",
+//   (strong("C++"), strong("Python"), strong("CUDA"), "Rust", "Typescript", "PyTorch"),
+// )
+// #resume-skill-item(
+//   "Technical",
+//   (strong("Distributed Systems"), strong("Parallel Computing"), "Performance Optimization", "Cloud Infrastructure", "Open-Source Project Development")
+// )
+// #resume-skill-item(
+//   "Laboratory",
+//   ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring")
+// )
+// #resume-skill-item(
+//   "Languages",
+//   ("English (TOEFL 104)", "Chinese (native)")
+// )
+
+// #resume-skill-item(
+//   "Soft Skills",
+//   ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation")
+// )
 
