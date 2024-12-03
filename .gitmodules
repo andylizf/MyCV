@@ -1,0 +1,3 @@
+[submodule "modern-cv"]
+	path = modern-cv
+	url = https://github.com/andylizf/modern-cv.git
