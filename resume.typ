@@ -23,7 +23,7 @@
 
 = Research Interests
 
-AI systems researcher driving innovation in machine learning infrastructure and cloud computing, leveraging systems expertise to architect and optimize next-generation AI platforms and distributed systems.
+I'm interested in building and optimizing machine learning infrastructure and cloud computing systems, focusing on architecting efficient AI platforms and distributed systems that can scale to meet next-generation demands.
 
 = Education
 
@@ -35,7 +35,7 @@ AI systems researcher driving innovation in machine learning infrastructure and 
 )
 
 #resume-item[
-  - Cultivated research methodology and problem identification skills in #link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems] seminar, learning to identify critical challenges in modern AI systems through paper analysis and discussions
+  - Cultivated research methodology and problem identification skills in prestigious #link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems] seminar, learning to identify critical challenges in modern AI systems through paper analysis and discussions.
 ]
 
 #resume-entry(
@@ -46,20 +46,10 @@ AI systems researcher driving innovation in machine learning infrastructure and 
 )
 
 #resume-item[
-  - Member of Turing Honors Class, which is an elite CS program for top talented students
-  - GPA: #strong("3.8")/4.0 (Top 5%, Ranked 5/136)
+  - Member of Turing Honors Class, which is an elite CS program for top talented students.
+  - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5")/136)
 ]
 
-// #resume-entry(
-//   title: "The High School Affiliated to Renmin University of China (RDFZ)",
-//   location: "Beijing, China",
-//   date: "2019 - 2022",
-//   description: "High School Diploma",
-// )
-
-// #resume-item[
-//   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
-// ]
 
 = Experience
 
@@ -71,8 +61,8 @@ AI systems researcher driving innovation in machine learning infrastructure and 
 )
 
 #resume-item[
-  - Developed cross-cloud AI workflow scheduling in #link("https://github.com/skypilot-org/skypilot")[SkyPilot] achieving 20% cost reduction compared to state-of-the-art solutions
-  - Fixed 10+ bugs and drove cross-module refactoring in SkyPilot core components, improving maintainability and reliability
+  - Designed and implemented multi-cloud AI workflow orchestration system with data placement optimization, parallel execution support, and dynamic spot instance recovery built upon SkyPilot.
+  - Achieved 45% reduction in total cost while maintaining performance, creating first comprehensive solution for multi-cloud AI workflows.
 ]
 
 #resume-entry(
@@ -83,8 +73,8 @@ AI systems researcher driving innovation in machine learning infrastructure and 
 )
 
 #resume-item[
-  - Co-authored a paper (in submission) introducing _TREC_, a convolution method to eliminate transient redundancy in CNNs
-  - Optimized forward and backward propagation for efficiency while maintaining accuracy, integrated as a PyTorch extension
+  - Co-authored a paper (in submission) introducing _TREC_, a convolution method to eliminate transient redundancy in CNNs.
+  - Optimized forward and backward propagation for efficiency while maintaining accuracy, integrated as a PyTorch extension.
 ]
 
 #resume-entry(
@@ -95,8 +85,8 @@ AI systems researcher driving innovation in machine learning infrastructure and 
 )
 
 #resume-item[
-  - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem
-  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment
+  - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem.
+  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment.
 ]
 
 #resume-entry(
@@ -107,48 +97,34 @@ AI systems researcher driving innovation in machine learning infrastructure and 
 )
 
 #resume-item[
-  - Led 6 TAs and redesigned CacheLab demonstrating modern GPU memory coalescing for 200+ students
-  // - Led course reform, redesigned materials, and managed a team of teaching assistants
-  // - Enhanced student engagement through intuitive teaching methods and hands-on projects
+  - Led 6 TAs and redesigned CacheLab demonstrating modern GPU memory coalescing for 200+ students.
 ]
 
 
 = Honors and Awards
 
-#let resume-award-entry(
-  title: "",
-  organization: "",
-  date: "",
-) = {
-  resume-entry(
-    title: title,
-    date: date,
-    description: organization,
-  )
-}
-
 #resume-award-entry(
   title: "National Scholarship",
   date: "September 2024",
-  organization: "Ministry of Education (China)",
+  // organization: "Ministry of Education (China)",
 )
 
 #resume-award-entry(
   title: "First Place, Computer Comprehensive Ability Competition (Systems Track)",
   date: "May 2024",
-  organization: "Renmin University of China",
+  // organization: "Renmin University of China",
 )
 
 #resume-award-entry(
   title: "First-Class Scholarship for Social Work and Volunteer Service",
   date: "September 2023",
-  organization: "Renmin University of China",
+  // organization: "Renmin University of China",
 )
 
 #resume-award-entry(
   title: "First Prize, National Olympiad in Informatics in Provinces (NOIP), China",
   date: "December 2019",
-  organization: "China Computer Federation",
+  // organization: "China Computer Federation",
 )
 
 = Projects
@@ -160,9 +136,7 @@ AI systems researcher driving innovation in machine learning infrastructure and 
 )
 
 #resume-item[
-  - Architected scalable full-stack platform featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU
-  // - Developed a university-wide platform integrating AI for enhanced learning and knowledge sharing
-  // - Facilitating efficient academic resource management and interactive communication for students and faculty
+  - Architected scalable full-stack platform featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU.
 ]
 
 #resume-entry(
@@ -172,47 +146,7 @@ AI systems researcher driving innovation in machine learning infrastructure and 
   description: "Framework for running ML/AI workloads across any cloud infrastructure",
 )
 #resume-item[
-  - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components
-  - Enhanced system reliability through comprehensive testing and bug fixes
-  - Actively participated in weekly dev meetings and community engagement
+  - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components.
+  - Performed extensive refactoring and bug fixes across SkyPilot modules, improving code maintainability and reliability.
+  - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
 ]
-
-// #linebreak()
-
-// = Publications
-
-// #label("checkpoint")
-// #resume-publication(
-//   title: "Checkpoint: A Tool for Supporting Terminal-Based Capture-the-Flag Assessments",
-//   authors: [Connor Bernard\*, Melissa Fabros\*, #strong("Zhifei Li*"), Narges Norouzi, Daniel Garcia, Armando Fox],
-//   venue: "Acm Sigcse 2025 Poster",
-// )
-
-// #resume-item[
-//   - Developed a pedagogy-driven assessment framework enabling progressive learning through interactive terminal missions, implemented with Docker-based validation system
-// ]
-
-// = Skills
-
-// #resume-skill-item(
-//   "Coding",
-//   (strong("C++"), strong("Python"), strong("CUDA"), "Rust", "Typescript", "PyTorch"),
-// )
-// #resume-skill-item(
-//   "Technical",
-//   (strong("Distributed Systems"), strong("Parallel Computing"), "Performance Optimization", "Cloud Infrastructure", "Open-Source Project Development")
-// )
-// #resume-skill-item(
-//   "Laboratory",
-//   ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring")
-// )
-// #resume-skill-item(
-//   "Languages",
-//   ("English (TOEFL 104)", "Chinese (native)")
-// )
-
-// #resume-skill-item(
-//   "Soft Skills",
-//   ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation")
-// )
-
