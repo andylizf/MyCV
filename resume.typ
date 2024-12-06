@@ -63,7 +63,7 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 
 #resume-item[
   - Designed and implemented multi-cloud AI workflow orchestration system with data placement optimization, parallel execution support, and dynamic spot instance recovery built upon SkyPilot.
-  - Achieved 45% reduction in total cost while maintaining performance, creating first comprehensive solution for multi-cloud AI workflows.
+  - Achieved 45% reduction in total cost while maintaining performance through smart data placement, creating first comprehensive solution for multi-cloud AI workflows with simplified management.
 ]
 
 #resume-entry(
