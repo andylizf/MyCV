@@ -15,6 +15,7 @@
     //   "Empowering Tomorrow's AI",
     ),
   ),
+  font: ("Helvetica Neue"), // Or Calibri
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
