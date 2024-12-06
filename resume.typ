@@ -48,7 +48,7 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 
 #resume-item[
   - Member of Turing Honors Class, which is an elite CS program for top talented students.
-  - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5")/136)
+  - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5/136", delta: 900))
 ]
 
 
