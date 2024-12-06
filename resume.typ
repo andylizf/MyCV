@@ -55,10 +55,10 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 = Experience
 
 #resume-entry(
-  title: "Research Intern",
+  title: "Sky Computing Lab",
   location: "University of California, Berkeley",
   date: "September 2024 - Present",
-  description: "Sky Computing Lab, UCB"
+  description: "Research Intern"
 )
 
 #resume-item[
@@ -67,10 +67,10 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 ]
 
 #resume-entry(
-  title: "Research Assistant, supervised by Prof. Feng Zhang",
+  title: "Key Laboratory of DEKE",
   location: "Renmin University of China",
   date: "February 2023 - August 2024",
-  description: "Key Laboratory of Data Engineering and Knowledge Engineering, RUC",
+  description: "Research Assistant, supervised by Prof. Feng Zhang",
 )
 
 #resume-item[
@@ -79,10 +79,10 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 ]
 
 #resume-entry(
-  title: "President",
+  title: "RUC Computer Association",
   location: "Renmin University of China",
   date: "2023 - Present",
-  description: "RUC Computer Association (RUCCA)",
+  description: "President",
 )
 
 #resume-item[
@@ -91,10 +91,10 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 ]
 
 #resume-entry(
-  title: "Head Teaching Assistant",
+  title: "Introduction to Computer Systems (ICS)",
   location: "Renmin University of China",
   date: "Fall 2024",
-  description: "Introduction to Computer Systems (ICS) Course",
+  description: "Head Teaching Assistant",
 )
 
 #resume-item[
