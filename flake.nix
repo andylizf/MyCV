@@ -44,6 +44,31 @@
             
             echo "Package installed at: $SYSTEM_PKG_DIR"
             
+            # Set up fonts for Typst
+            export FONTCONFIG_FILE=$(mktemp)
+            cat > $FONTCONFIG_FILE <<EOF
+            <?xml version="1.0"?>
+            <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+            <fontconfig>
+              <!-- Add Font Awesome -->
+              <dir>${pkgs.font-awesome}/share/fonts/</dir>
+              <!-- Add Roboto -->
+              <dir>${pkgs.roboto}/share/fonts/</dir>
+              <!-- Add Source Sans Pro -->
+              <dir>${pkgs.source-sans-pro}/share/fonts/</dir>
+              <!-- System fonts -->
+              <dir>/System/Library/Fonts</dir>
+              <dir>/Library/Fonts</dir>
+              <dir>~/Library/Fonts</dir>
+            </fontconfig>
+            EOF
+            
+            echo "Font configuration set up at: $FONTCONFIG_FILE"
+            
+            # Inform the user about the fonts
+            echo "Available FontAwesome fonts:"
+            find ${pkgs.font-awesome}/share/fonts/ -type f -name "*.ttf" -o -name "*.otf"
+            
             exec ${pkgs.fish}/bin/fish
           '';
         };
