@@ -50,12 +50,12 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
   - GPA: #strong("3.8")/4.0 (Top 5%, Ranked 5/136)
 ]
 
-// #resume-entry(
-//   title: "The High School Affiliated to Renmin University of China (RDFZ)",
-//   location: "Beijing, China",
-//   date: "2019 - 2022",
-//   description: "High School Diploma",
-// )
+ #resume-entry(
+   title: "The High School Affiliated to Renmin University of China (RDFZ)",
+   location: "Beijing, China",
+   date: "September 2019 - June 2022",
+   description: "High School Diploma",
+ )
 
 // #resume-item[
 //   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
@@ -116,6 +116,18 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 = Honors and Awards
 
 #resume-entry(
+  title: "CCF Elite Collegiate Award",
+  date: "August 2025",
+  description: "China Computer Federation",
+)
+
+#resume-entry(
+  title: "Dean's Scholarship",
+  date: "May 2025",
+  description: "Gaoling School of Artificial Intelligence",
+)
+
+#resume-entry(
   title: "National Scholarship",
   date: "September 2024",
   description: "Ministry of Education (China)",
@@ -156,6 +168,16 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 #linebreak()
 
 = Publications
+
+#resume-publication(
+  title: "SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference",
+  authors: [Tian Xia, Ziming Mao, Jamison Kerney, Ethan J. Jackson, #strong("Zhifei Li"), Jiarong Xing, Scott Shenker, Ion Stoica],
+  venue: "EuroSys 2026",
+)
+
+#resume-item[
+  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
+]
 
 #label("checkpoint")
 #resume-publication(

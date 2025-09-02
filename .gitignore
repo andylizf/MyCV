@@ -1,1 +1,7 @@
 *.pdf
+.fonts/
+.leann/
+.package-build/
+.typst-home/
+.vscode/
+.DS_Store
