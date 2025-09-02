@@ -117,13 +117,13 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 #resume-award-entry(
   title: "CCF Elite Collegiate Award",
   date: "August 2025",
-  description: "China Computer Federation",
+  // description: "China Computer Federation",
 )
 
 #resume-award-entry(
   title: "Dean's Scholarship",
   date: "May 2025",
-  description: "Gaoling School of Artificial Intelligence",
+  // description: "Gaoling School of Artificial Intelligence",
 )
 
 #resume-award-entry(
