@@ -67,7 +67,7 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 #resume-entry(
   title: "Sky Computing Lab",
   location: "University of California, Berkeley",
-  date: "September 2024 - Present",
+  date: "September 2024 - September 2024",
   description: "Research Intern",
 )
 
@@ -194,3 +194,33 @@ I'm interested in building and optimizing machine learning infrastructure and cl
   - Performed extensive refactoring and bug fixes across SkyPilot modules, improving code maintainability and reliability.
   - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
 ]
+
+= Skills
+
+#resume-skill-item(
+  "Coding",
+  (strong("C++"), strong("Python"), strong("CUDA"), "Rust", "Typescript", "PyTorch"),
+)
+#resume-skill-item(
+  "Technical",
+  (
+    strong("Distributed Systems"),
+    strong("Parallel Computing"),
+    "Performance Optimization",
+    "Cloud Infrastructure",
+    "Open-Source Project Development",
+  ),
+)
+#resume-skill-item(
+  "Laboratory",
+  ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring"),
+)
+#resume-skill-item(
+  "Languages",
+  ("English (TOEFL 104)", "Chinese (native)"),
+)
+
+#resume-skill-item(
+  "Soft Skills",
+  ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation"),
+)
