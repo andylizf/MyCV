@@ -9,13 +9,13 @@
     github: "andylizf",
     linkedin: "andylizf",
     positions: (
-    //   "Beijing, China",
-    //   "AI Systems Researcher",
-    //   "Study Abroad @UC Berkeley",
-    //   "Empowering Tomorrow's AI",
+      //   "Beijing, China",
+      //   "AI Systems Researcher",
+      //   "Study Abroad @UC Berkeley",
+      //   "Empowering Tomorrow's AI",
     ),
   ),
-  font: ("Helvetica Neue"), // Or Calibri
+  font: "Helvetica Neue", // Or Calibri
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
@@ -51,6 +51,16 @@ I'm interested in building and optimizing machine learning infrastructure and cl
   - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5/136", delta: 900))
 ]
 
+#resume-entry(
+  title: "The High School Affiliated to Renmin University of China (RDFZ)",
+  location: "Beijing, China",
+  date: "September 2019 - June 2022",
+  description: "High School Diploma",
+)
+
+// #resume-item[
+//   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
+// ]
 
 = Experience
 
@@ -58,7 +68,7 @@ I'm interested in building and optimizing machine learning infrastructure and cl
   title: "Sky Computing Lab",
   location: "University of California, Berkeley",
   date: "September 2024 - Present",
-  description: "Research Intern"
+  description: "Research Intern",
 )
 
 #resume-item[
@@ -105,6 +115,18 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 = Honors and Awards
 
 #resume-award-entry(
+  title: "CCF Elite Collegiate Award",
+  date: "August 2025",
+  description: "China Computer Federation",
+)
+
+#resume-award-entry(
+  title: "Dean's Scholarship",
+  date: "May 2025",
+  description: "Gaoling School of Artificial Intelligence",
+)
+
+#resume-award-entry(
   title: "National Scholarship",
   date: "September 2024",
   // organization: "Ministry of Education (China)",
@@ -145,6 +167,27 @@ I'm interested in building and optimizing machine learning infrastructure and cl
   location: github-link("skypilot-org/skypilot"),
   date: "September 2024 - Present",
   description: "Framework for running ML/AI workloads across any cloud infrastructure",
+)
+
+// #linebreak()
+
+= Publications
+
+#resume-publication(
+  title: "SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference",
+  authors: [Tian Xia, Ziming Mao, Jamison Kerney, Ethan J. Jackson, #strong("Zhifei Li"), Jiarong Xing, Scott Shenker, Ion Stoica],
+  venue: "EuroSys 2026",
+)
+
+#resume-item[
+  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
+]
+
+#label("checkpoint")
+#resume-publication(
+  title: "Checkpoint: A Tool for Supporting Terminal-Based Capture-the-Flag Assessments",
+  authors: [Connor Bernard\*, Melissa Fabros\*, #strong("Zhifei Li*"), Narges Norouzi, Daniel Garcia, Armando Fox],
+  venue: "Acm Sigcse 2025 Poster",
 )
 #resume-item[
   - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components.
