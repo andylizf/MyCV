@@ -9,12 +9,13 @@
     github: "andylizf",
     linkedin: "andylizf",
     positions: (
-    //   "Beijing, China",
-    //   "AI Systems Researcher",
-    //   "Study Abroad @UC Berkeley",
-    //   "Empowering Tomorrow's AI",
+      //   "Beijing, China",
+      //   "AI Systems Researcher",
+      //   "Study Abroad @UC Berkeley",
+      //   "Empowering Tomorrow's AI",
     ),
   ),
+  font: "Helvetica Neue", // Or Calibri
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
@@ -23,39 +24,39 @@
 
 = Research Interests
 
-Aspiring AI systems researcher seeking opportunities to innovate in machine learning systems and cloud computing, leveraging my background in computer systems and software development to contribute to cutting-edge systems for AI projects.
+I'm interested in building and optimizing machine learning infrastructure and cloud computing systems, focusing on architecting efficient AI platforms and distributed systems that can scale to meet next-generation demands.
 
 = Education
 
 #resume-entry(
   title: "University of California, Berkeley",
   location: "Berkeley, CA, USA",
-  date: "August 2024 - December 2024",
-  description: "Exchange Student, Computer Science",
+  date: "August 2024 - Present",
+  description: "Exchange Student, Computer Science (Ongoing)",
 )
 
 #resume-item[
-  - Cultivated research methodology and problem identification skills in #link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems] seminar, learning to identify critical challenges in modern AI systems through paper analysis and discussions
+  - Cultivated research methodology and problem identification skills in prestigious #link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems] seminar, learning to identify critical challenges in modern AI systems through paper analysis and discussions.
 ]
 
 #resume-entry(
   title: "Renmin University of China",
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
-  description: "Bachelor’s in Computer Science",
+  description: "Bachelor's in Computer Science",
 )
 
 #resume-item[
-  - Member of Turing Honors Class, which is an elite CS program for top talented students
-  - GPA: #strong("3.8")/4.0 (Top 5%, Ranked 5/136)
+  - Member of Turing Honors Class, which is an elite CS program for top talented students.
+  - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5/136", delta: 900))
 ]
 
- #resume-entry(
-   title: "The High School Affiliated to Renmin University of China (RDFZ)",
-   location: "Beijing, China",
-   date: "September 2019 - June 2022",
-   description: "High School Diploma",
- )
+#resume-entry(
+  title: "The High School Affiliated to Renmin University of China (RDFZ)",
+  location: "Beijing, China",
+  date: "September 2019 - June 2022",
+  description: "High School Diploma",
+)
 
 // #resume-item[
 //   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
@@ -64,91 +65,89 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 = Experience
 
 #resume-entry(
-  title: "Research Intern",
+  title: "Sky Computing Lab",
   location: "University of California, Berkeley",
-  date: "September 2024 - December 2024",
-  description: "Sky Computing Lab, UCB"
+  date: "September 2024 - September 2024",
+  description: "Research Intern",
 )
 
 #resume-item[
-  - Developed cross-cloud AI workflow scheduling in #link("https://github.com/skypilot-org/skypilot")[SkyPilot] achieving 20% cost reduction compared to state-of-the-art solutions
-  - Fixed 10+ bugs and drove cross-module refactoring in SkyPilot core components, improving maintainability and reliability
+  - Designed and implemented multi-cloud AI workflow orchestration system with data placement optimization, parallel execution support, and dynamic spot instance recovery built upon SkyPilot.
+  - Achieved 45% reduction in total cost while maintaining performance through smart data placement, creating first comprehensive solution for multi-cloud AI workflows with simplified management.
 ]
 
 #resume-entry(
-  title: "Research Assistant, supervised by Prof. Feng Zhang",
+  title: "Key Laboratory of DEKE",
   location: "Renmin University of China",
   date: "February 2023 - August 2024",
-  description: "Key Laboratory of Data Engineering and Knowledge Engineering, RUC",
+  description: "Research Assistant, supervised by Prof. Feng Zhang",
 )
 
 #resume-item[
-  - Co-authored a paper (in submission) introducing _TREC_, a convolution method to eliminate transient redundancy in CNNs
-  - Optimized forward and backward propagation for efficiency while maintaining accuracy, integrated as a PyTorch extension
+  - Co-authored a paper (in submission) introducing _TREC_, a convolution method to eliminate transient redundancy in CNNs.
+  - Optimized forward and backward propagation for efficiency while maintaining accuracy, integrated as a PyTorch extension.
 ]
 
 #resume-entry(
-  title: "President",
+  title: "RUC Computer Association",
   location: "Renmin University of China",
   date: "2023 - Present",
-  description: "RUC Computer Association (RUCCA)",
+  description: "President",
 )
 
 #resume-item[
-  - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem
-  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment
+  - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem.
+  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment.
 ]
 
 #resume-entry(
-  title: "Head Teaching Assistant",
+  title: "Introduction to Computer Systems (ICS)",
   location: "Renmin University of China",
   date: "Fall 2024",
-  description: "Introduction to Computer Systems (ICS) Course",
+  description: "Head Teaching Assistant",
 )
 
 #resume-item[
-  - Led 6 TAs and redesigned CacheLab demonstrating modern GPU memory coalescing for 200+ students
-  // - Led course reform, redesigned materials, and managed a team of teaching assistants
-  // - Enhanced student engagement through intuitive teaching methods and hands-on projects
+  - Led 6 TAs and redesigned CacheLab demonstrating modern GPU memory coalescing for 200+ students.
 ]
 
 
 = Honors and Awards
 
-#resume-entry(
+#resume-award-entry(
   title: "CCF Elite Collegiate Award",
   date: "August 2025",
-  description: "China Computer Federation",
+  // description: "China Computer Federation",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "Dean's Scholarship",
   date: "May 2025",
-  description: "Gaoling School of Artificial Intelligence",
+  // description: "Gaoling School of Artificial Intelligence",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "National Scholarship",
   date: "September 2024",
-  description: "Ministry of Education (China)",
+  // organization: "Ministry of Education (China)",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "First Place, Computer Comprehensive Ability Competition (Systems Track)",
   date: "May 2024",
-  description: "Renmin University of China",
+  // organization: "Renmin University of China",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "First-Class Scholarship for Social Work and Volunteer Service",
   date: "September 2023",
-  description: "Renmin University of China",
+  // organization: "Renmin University of China",
 )
 
-#resume-entry(
+#resume-award-entry(
   title: "First Prize, National Olympiad in Informatics in Provinces (NOIP), China",
   date: "December 2019",
-  description: "China Computer Federation",
+  // organization: "China Computer Federation",
 )
 
 = Projects
@@ -160,12 +159,17 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 )
 
 #resume-item[
-  - Architected scalable full-stack platform with Vue.js, Nest.js and Spring Boot, featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU
-  // - Developed a university-wide platform integrating AI for enhanced learning and knowledge sharing
-  // - Facilitating efficient academic resource management and interactive communication for students and faculty
+  - Architected scalable full-stack platform featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU.
 ]
 
-#linebreak()
+#resume-entry(
+  title: "SkyPilot: Run AI on Any Infra",
+  location: github-link("skypilot-org/skypilot"),
+  date: "September 2024 - Present",
+  description: "Framework for running ML/AI workloads across any cloud infrastructure",
+)
+
+// #linebreak()
 
 = Publications
 
@@ -185,9 +189,10 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
   authors: [Connor Bernard\*, Melissa Fabros\*, #strong("Zhifei Li*"), Narges Norouzi, Daniel Garcia, Armando Fox],
   venue: "Acm Sigcse 2025 Poster",
 )
-
 #resume-item[
-  - Developed a pedagogy-driven assessment framework enabling progressive learning through interactive terminal missions, implemented with Docker-based validation system
+  - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components.
+  - Performed extensive refactoring and bug fixes across SkyPilot modules, improving code maintainability and reliability.
+  - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
 ]
 
 = Skills
@@ -198,19 +203,24 @@ Aspiring AI systems researcher seeking opportunities to innovate in machine lear
 )
 #resume-skill-item(
   "Technical",
-  (strong("Distributed Systems"), strong("Parallel Computing"), "Performance Optimization", "Cloud Infrastructure", "Open-Source Project Development")
+  (
+    strong("Distributed Systems"),
+    strong("Parallel Computing"),
+    "Performance Optimization",
+    "Cloud Infrastructure",
+    "Open-Source Project Development",
+  ),
 )
 #resume-skill-item(
   "Laboratory",
-  ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring")
+  ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring"),
 )
 #resume-skill-item(
   "Languages",
-  ("English (TOEFL 104)", "Chinese (native)")
+  ("English (TOEFL 104)", "Chinese (native)"),
 )
 
 #resume-skill-item(
   "Soft Skills",
-  ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation")
+  ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation"),
 )
-

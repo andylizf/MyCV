@@ -1,6 +1,6 @@
 # MyCV
 
-My modern academic CV built with [typst](https://github.com/typst/typst), based on [modern-cv](https://github.com/DeveloperPaul123/modern-cv).
+My modern academic CV built with [typst](https://github.com/typst/typst), using a customized [modern-cv](https://github.com/DeveloperPaul123/modern-cv) template.
 
 ## Setup Requirements
 
@@ -18,7 +18,9 @@ My modern academic CV built with [typst](https://github.com/typst/typst), based 
 1. After cloning the repo, install the dependencies:
 ```bash
 cd modern-cv
-just install
+just dev     # For development (editable install, like pip install -e)
+# OR
+just install # For production (copies files)
 ```
 
 2. Compile the CV:
