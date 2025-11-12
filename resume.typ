@@ -63,7 +63,63 @@
 
 = Research Interests
 
-Building and optimizing machine learning infrastructure and cloud computing systems to create efficient, scalable AI platforms and distributed systems for next-generation workloads.
+My research interests lie in designing efficient systems for machine learning workloads, with focus on cloud resource orchestration, distributed training infrastructure, and storage-optimized serving systems. I am particularly interested in leveraging cross-layer optimizations and exploring how AI can fundamentally transform systems design methodologies to address cost-performance tradeoffs in modern ML systems.
+
+// too general. 啥都做
+// scalable. AI platforms.
+// three lines. two sentences.
+// 每一个bullet points. one line. and highlevel
+// prior work. delete
+// numbers in the same line.
+// method keep.
+// performance number the last line.
+// codesign. iterate the. loading the discussion. of the policy design
+// technical details.
+
+// delete Can't Be Late
+// remove discovered. design the evolve pipeline.
+// contribute % codes.
+// top-10 contributoes.
+// 
+
+
+= Education
+
+#resume-entry(
+  title: underline()[University of California, Berkeley],
+  title-link: "https://www.berkeley.edu",
+  location: "Berkeley, CA, USA",
+  date: "August 2024 - December 2024",
+  description: "Exchange Student, Computer Science",
+)
+
+#resume-item[
+  - Cultivated research methodology and problem identification skills in #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems]] graduate seminar through paper analysis, critical evaluation, and research discussions.
+]
+
+#resume-entry(
+  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://www.ruc.edu.cn/")[Renmin University of China]] #h(6pt) #text(size: 8.5pt, fill: gray.darken(20%))[(Ranked #text(weight: "black")[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
+  location: "Beijing, China",
+  date: "September 2022 - June 2026 (Expected)",
+  description: "Bachelor's in Computer Science",
+)
+
+#resume-item[
+  - Member of Turing Honors Class, a selective computer science program for top-performing students.
+  - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5/136", delta: 900))
+]
+
+// #resume-entry(
+//  title: underline()[The High School Affiliated to Renmin University of China (RDFZ)],
+//  title-link: "http://www.rdfz.cn/",
+//  location: "Beijing, China",
+//  date: "September 2019 - June 2022",
+//  description: "High School Diploma",
+//)
+
+// #resume-item[
+//   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
+// ]
 
 = Experience
 
@@ -106,7 +162,7 @@ Building and optimizing machine learning infrastructure and cloud computing syst
 #metadata("skynomad-ref") <skynomad-paper>
 #resume-publication(
   title: paper("SkyNomad: Cost-Effective Multi-Region Scheduling for Deadline-Sensitive Workloads on Spot Instances"),
-  authors: [#strong("Zhifei Li*"), Tian Xia\*, #text(style: "italic")[et al.], Ion Stoica],
+  authors: [#strong("Zhifei Li*"), Tian Xia\*, #text(style: "italic")[et al.], Scott Shenker, Ion Stoica],
   venue: "OSDI '26 (in submission)",
 )
 
@@ -168,45 +224,6 @@ Building and optimizing machine learning infrastructure and cloud computing syst
 //   - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components.
 //   - Performed extensive refactoring and bug fixes across SkyPilot modules, improving code maintainability and reliability.
 //   - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
-// ]
-
-
-= Education
-
-#resume-entry(
-  title: underline()[University of California, Berkeley],
-  title-link: "https://www.berkeley.edu",
-  location: "Berkeley, CA, USA",
-  date: "August 2024 - December 2024",
-  description: "Exchange Student, Computer Science",
-)
-
-#resume-item[
-  - Cultivated research methodology and problem identification skills in #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems]] graduate seminar through paper analysis, critical evaluation, and research discussions.
-]
-
-#resume-entry(
-  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://www.ruc.edu.cn/")[Renmin University of China]] #h(6pt) #text(size: 8.5pt, fill: gray.darken(20%))[(Ranked #text(weight: "black")[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
-  location: "Beijing, China",
-  date: "September 2022 - June 2026 (Expected)",
-  description: "Bachelor's in Computer Science",
-)
-
-#resume-item[
-  - Member of Turing Honors Class, a selective computer science program for top-performing students.
-  - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5/136", delta: 900))
-]
-
-#resume-entry(
-  title: underline()[The High School Affiliated to Renmin University of China (RDFZ)],
-  title-link: "http://www.rdfz.cn/",
-  location: "Beijing, China",
-  date: "September 2019 - June 2022",
-  description: "High School Diploma",
-)
-
-// #resume-item[
-//   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
 // ]
 
 = Honors and Awards
