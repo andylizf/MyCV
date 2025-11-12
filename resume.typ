@@ -24,7 +24,7 @@
 }
 
 #show ref.where(target: label("leann-paper")): it => {
-  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[LEANN paper]]
+  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[LEANN]]
 }
 
 #show ref.where(target: label("skynomad-paper")): it => {
@@ -37,6 +37,14 @@
 
 #show ref.where(target: label("frontiercs-paper")): it => {
   underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[FrontierCS]]
+}
+
+#show ref.where(target: label("leann-project")): it => {
+  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[LEANN GitHub]]
+}
+
+#show ref.where(target: label("skypilot-project")): it => {
+  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[SkyPilot]]
 }
 
 #show: resume.with(
@@ -63,25 +71,7 @@
 
 = Research Interests
 
-My research interests lie in designing efficient systems for machine learning workloads, with focus on cloud resource orchestration, distributed training infrastructure, and storage-optimized serving systems. I am particularly interested in leveraging cross-layer optimizations and exploring how AI can fundamentally transform systems design methodologies to address cost-performance tradeoffs in modern ML systems.
-
-// too general. 啥都做
-// scalable. AI platforms.
-// three lines. two sentences.
-// 每一个bullet points. one line. and highlevel
-// prior work. delete
-// numbers in the same line.
-// method keep.
-// performance number the last line.
-// codesign. iterate the. loading the discussion. of the policy design
-// technical details.
-
-// delete Can't Be Late
-// remove discovered. design the evolve pipeline.
-// contribute % codes.
-// top-10 contributoes.
-// 
-
+My research interests lie in designing efficient systems for machine learning workloads, focusing on cloud resource orchestration, distributed training infrastructure, and storage-optimized serving. I am particularly interested in cross-layer optimizations and exploring how AI can fundamentally transform systems design methodologies.
 
 = Education
 
@@ -132,16 +122,20 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - *Developed @skynomad-paper for multi-region Spot Instance scheduling.*
-    - Spot Instances are cost-effective cloud instances subject to preemption at any moment. Previous work on applying Spot Instances to deadline-sensitive batch jobs faced fundamental limitations due to insufficient availability in single regions.
-    - Designed a principled algorithmic framework that solves the multi-objective optimization problem, trading off spot opportunities across multiple regions against egress costs and instability risks, achieving 50%+ cost reduction over prior state-of-the-art while meeting deadline guarantees.
-    - Co-led this project with a PhD student, collaboratively deciding the algorithm design and project direction. Specifically, took charge of complete methodology design and implementation of the simulation environment for algorithm evaluation.
-    - Developed production-ready system extending SkyPilot for training workloads, demonstrating substantial cost savings for academic researchers compared to commercial cloud training services. Our work has been submitted to #strong[OSDI '26] with co-first authorship.
+  - *Designed @skynomad-paper for multi-region Spot Instance scheduling.*
+    - Addressed fundamental single-region availability bottleneck with Unified Cost Model trading off cross-region opportunities vs egress costs
+    - Co-led project with PhD student, owned complete methodology design and simulation framework implementation
+    - Built production system extending #link(<skypilot-project>)[SkyPilot]; achieved 50% cost reduction over SOTA, \$1,000 savings vs AWS SageMaker
 
   - *Explored AI-driven systems research.*
-    - Investigated the frontier capabilities of AI-driven research systems in addressing research-level problems. Collaborated with senior PhD students to realize AI-driven research systems like AlphaEvolve, GEPA, and ShinkaEvolve, demonstrating potential in reframing systems research methodology and enabling researchers to focus on problem identification rather than manual optimization.
-    - Executed #text(style: "italic")[Can't Be Late] case study in @barbarians-paper, applying AI-driven optimization to traditional spot scheduling and achieving 30% performance improvement over recent NSDI best paper, demonstrating the potential of AI approaches for the systems community. Authored technical blog post and delivered presentations exploring future directions of AI-driven systems research methodology.
-    - Beyond the vision paper, contributed to @frontiercs-paper benchmark evaluating AI capabilities on computer science research tasks, helping establish frameworks for assessing AI systems' potential in research-level problem solving.
+    - Designed evolution pipelines for OpenEvolve/GEPA demonstrating automated systems research capabilities
+    - Led primary case study in @barbarians-paper achieving 30% improvement over NSDI best paper via evolutionary search
+    - Developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS research tasks
+
+  - *Developed @leann-paper for storage-efficient compound AI systems.*
+    - Identified critical need for storage-efficient vector search in RAG pipeline where storage costs dominate
+    - Co-designed two-level recompute algorithm extending FAISS C++; built evaluation framework achieving 97% storage reduction
+    - Led research-to-production translation contributing 70% of codebase; reached #link(<leann-project>)[4,000+ stars on GitHub]
 ]
 
 // #resume-entry(
@@ -166,24 +160,12 @@ My research interests lie in designing efficient systems for machine learning wo
   venue: "OSDI '26 (in submission)",
 )
 
-#resume-item[
-  - Co-led project addressing fundamental availability limitations in single-region spot instance scheduling, a bottleneck unresolved by prior work, by leveraging geographic diversity across multiple cloud regions to unlock previously inaccessible capacity.
-  - Developed Unified Cost Model algorithm that evaluates multi-region scheduling decisions based on probabilistic future expectations derived from historical availability patterns and real-time price dynamics, achieving 50% cost reduction over prior state-of-the-art.
-  - Architected production-grade system extending SkyPilot for deadline-sensitive workloads, demonstrating \$1,000 cost savings on Qwen model fine-tuning compared to AWS SageMaker.
-]
-
 #metadata("leann-ref") <leann-paper>
 #resume-publication(
   title: paper("LEANN: A Low-Storage Overhead Vector Index", url: "https://arxiv.org/abs/2506.08276"),
   authors: [Yichuan Wang, #strong("Zhifei Li"), Shu Liu, #text(style: "italic")[et al.], Ion Stoica, Sewon Min, Matei Zaharia, Joseph Gonzalez],
   venue: "MLSys '26 (in submission)",
 )
-
-#resume-item[
-  - Co-designed and executed experimental evaluation framework, producing 70% of benchmark results and 90% of paper figures demonstrating 97% storage reduction across diverse RAG workloads.
-  - Implemented the paper's core two-level recompute algorithm by extending FAISS's C++ vector indexing architecture, enabling dynamic query-time decompression that trades minimal computation for order-of-magnitude storage savings.
-  - Identified the "storage tax" problem and QPS-storage tradeoff as fundamental design considerations, shaping the paper's problem formulation and evaluation methodology.
-]
 
 #metadata("barbarians-ref") <barbarians-paper>
 #resume-publication(
@@ -192,21 +174,12 @@ My research interests lie in designing efficient systems for machine learning wo
   venue: "arXiv",
 )
 
-#resume-item[
-  - Executed the Can't Be Late case study, the paper's primary demonstration of AI-driven systems optimization, achieving 30% performance improvement over a recent NSDI best paper.
-  - Discovered that vanilla starting points can outperform highly-optimized baselines in evolutionary optimization, revealing that specialized code may constrain search space to local optima.
-]
-
 #metadata("frontiercs-ref") <frontiercs-paper>
 #resume-publication(
   title: paper("FrontierCS: The Next Frontier of Computer Science"),
   authors: [Qiuyang Mang\*, Wenhao Cai\*, #strong("Zhifei Li*"), Huanzhi Mao\*, #text(style: "italic")[et al.],  Ion Stoica, Jingbo Shang, Zhuang Liu, Alvin Cheung],
   venue: "arXiv",
 )
-
-#resume-item[
-  - Developed evaluation framework for benchmarking AI systems on computer science research problems, designing problem specifications, scoring methodology, and curating 40 research tasks spanning diverse subfields to assess AI reasoning capabilities.
-]
 
 #resume-publication(
   title: paper("SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference", url: "https://arxiv.org/abs/2505.24095v2"),
@@ -229,13 +202,13 @@ My research interests lie in designing efficient systems for machine learning wo
 = Honors and Awards
 
 #resume-award-entry(
-  title: [CCF Elite Collegiate Award #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(\<100 recipients nationally)]],
+  title: [Elite Collegiate Award, China Computer Federation #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(\<100 recipients nationally)]],
   date: "August 2025",
   // description: "China Computer Federation",
 )
 
 #resume-award-entry(
-  title: "Dean's Scholarship",
+  title: "Dean's Scholarship, Gaoling School of AI",
   date: "May 2025",
   // description: "Gaoling School of Artificial Intelligence",
 )
@@ -266,6 +239,7 @@ My research interests lie in designing efficient systems for machine learning wo
 
 = Projects
 
+#metadata("leann-project-ref") <leann-project>
 #resume-entry(
   title: "LEANN: the Smallest Vector Index in the World",
   location: gh_repo("yichuan-w/LEANN", stars: "4.1k", label: "LEANN"),
@@ -278,6 +252,7 @@ My research interests lie in designing efficient systems for machine learning wo
   - Co-designed technical outreach strategy including blog posts and social media campaign, engaging volunteers for cross-platform testing and validation.
 ]
 
+#metadata("skypilot-project-ref") <skypilot-project>
 #resume-entry(
   title: "SkyPilot: Run AI on Any Infra",
   location: gh_repo("skypilot-org/skypilot", stars: "8.9k", label: "SkyPilot"),
@@ -286,8 +261,8 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Core contributor to the project, creating 70+ issues and merging 50+ pull requests implementing and fixing critical issues in core components of SkyPilot, contributing 30,000+ lines of code changes across resource management, scheduler optimization, and multi-cloud orchestration.
-  - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe, ensuring robustness of the control plane in production serving scenarios. Feature has been adopted by multiple startups including Hypermode and other production users.
+  - Top 10 contributor creating 70+ issues and merging 50+ pull requests; contributed 30,000+ lines of code changes
+  - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode
   // - Designed and implemented multi-cloud AI workflow orchestration system with data placement optimization, parallel execution support, and dynamic spot instance recovery built upon SkyPilot.
   // - Achieved 45% reduction in total cost while maintaining performance through smart data placement, creating first comprehensive solution for multi-cloud AI workflows with simplified management.
 ]
