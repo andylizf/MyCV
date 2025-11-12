@@ -29,9 +29,10 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 = Education
 
 #resume-entry(
-  title: "University of California, Berkeley",
+  title: underline()[University of California, Berkeley],
+  title-link: "https://www.berkeley.edu",
   location: "Berkeley, CA, USA",
-  date: "August 2024 - Present",
+  date: "August 2024 - Dec 2024",
   description: "Exchange Student, Computer Science (Ongoing)",
 )
 
@@ -40,7 +41,8 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 ]
 
 #resume-entry(
-  title: "Renmin University of China",
+  title: underline()[Renmin University of China],
+  title-link: "https://www.ruc.edu.cn/",
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
   description: "Bachelor's in Computer Science",
@@ -52,7 +54,8 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 ]
 
 #resume-entry(
-  title: "The High School Affiliated to Renmin University of China (RDFZ)",
+  title: underline()[The High School Affiliated to Renmin University of China (RDFZ)],
+  title-link: "http://www.rdfz.cn/",
   location: "Beijing, China",
   date: "September 2019 - June 2022",
   description: "High School Diploma",
@@ -62,13 +65,77 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 //   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
 // ]
 
+= Publications
+
+#resume-publication(
+  title: "SkyNomad: Cost-Effective Multi-Region Scheduling for Deadline-Sensitive Workloads on Spot Instances",
+  authors: [#strong("Zhifei Li*"), Tian Xia\*, Ziming Mao, Zihan Zhou, Yifan Qiao, Yi Xu, Scott Shenker, Ion Stoica],
+  venue: "OSDI ’26 (submitted)",
+)
+
+#resume-item[
+  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
+]
+
+#resume-publication(
+  title: "Barbarians at the Gate: How AI is Upending Systems Research",
+  authors: [Audrey Cheng\*, Shu Liu\*, Melissa Pan\*, #strong("Zhifei Li"), Bowen Wang, Alex Krentsel, Tian Xia, Mert Cemri, Jongseok Park, Shuo Yang, Jeff Chen, Aditya Desai, Jiarong Xing, Koushik Sen, Matei Zaharia, Ion Stoica],
+  venue: "OSDI ’26 (submitted)",
+)
+
+#resume-item[
+  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
+]
+
+#resume-publication(
+  title: "SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference",
+  authors: [Tian Xia, Ziming Mao, Jamison Kerney, Ethan J. Jackson, #strong("Zhifei Li"), Jiarong Xing, Scott Shenker, Ion Stoica],
+  venue: "MLSys ’26 (submitted)",
+)
+
+#resume-item[
+  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
+]
+
+#resume-publication(
+  title: "LEANN: A Low-Storage Overhead Vector Index",
+  authors: [Yichuan Wang, #strong("Zhifei Li"), Shu Liu, Yongji Wu, Ziming Mao, Yilong Zhao, Xiao Yan, Zhiying Xu, Yang Zhou, Ion Stoica, Sewon Min, Matei Zaharia, Joseph Gonzalez],
+  venue: "EuroSys ’26",
+)
+
+#resume-item[
+  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
+]
+
+#resume-publication(
+  title: "SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference",
+  authors: [Tian Xia, Ziming Mao, Jamison Kerney, Ethan J. Jackson, #strong("Zhifei Li"), Jiarong Xing, Scott Shenker, Ion Stoica],
+  venue: "EuroSys 2026",
+)
+
+#resume-item[
+  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
+]
+
+// #label("checkpoint")
+// #resume-publication(
+//  title: "Checkpoint: A Tool for Supporting Terminal-Based Capture-the-Flag Assessments",
+//  authors: [Connor Bernard\*, Melissa Fabros\*, #strong("Zhifei Li*"), Narges Norouzi, Daniel Garcia, Armando Fox],
+//  venue: "Acm Sigcse 2025 Poster",
+// )
+// #resume-item[
+//   - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components.
+//   - Performed extensive refactoring and bug fixes across SkyPilot modules, improving code maintainability and reliability.
+//   - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
+// ]
+
 = Experience
 
 #resume-entry(
   title: "Sky Computing Lab",
   location: "University of California, Berkeley",
   date: "September 2024 - September 2024",
-  description: "Research Intern",
+  description: [Research Intern, supervised by #link("https://people.eecs.berkeley.edu/~istoica/")[Prof. Ion Stoica]],
 )
 
 #resume-item[
@@ -170,30 +237,6 @@ I'm interested in building and optimizing machine learning infrastructure and cl
 )
 
 // #linebreak()
-
-= Publications
-
-#resume-publication(
-  title: "SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference",
-  authors: [Tian Xia, Ziming Mao, Jamison Kerney, Ethan J. Jackson, #strong("Zhifei Li"), Jiarong Xing, Scott Shenker, Ion Stoica],
-  venue: "EuroSys 2026",
-)
-
-#resume-item[
-  - Designed a multi-region load balancer that aggregates regional diurnal patterns for LLM serving, achieving 1.12-2.06× higher throughput and 25% cost reduction through cache-aware cross-region traffic handling
-]
-
-#label("checkpoint")
-#resume-publication(
-  title: "Checkpoint: A Tool for Supporting Terminal-Based Capture-the-Flag Assessments",
-  authors: [Connor Bernard\*, Melissa Fabros\*, #strong("Zhifei Li*"), Narges Norouzi, Daniel Garcia, Armando Fox],
-  venue: "Acm Sigcse 2025 Poster",
-)
-#resume-item[
-  - Contributed 3000+ LoC and 15+ PRs to core scheduling and resource management components.
-  - Performed extensive refactoring and bug fixes across SkyPilot modules, improving code maintainability and reliability.
-  - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
-]
 
 = Skills
 
