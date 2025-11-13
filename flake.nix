@@ -66,6 +66,14 @@
               rm -f "$FONTS_DIR/source-sans.zip" || true
             fi
 
+            if [ ! -d "$FONTS_DIR/roboto" ]; then
+              echo "Downloading Roboto..."
+              mkdir -p "$FONTS_DIR/roboto"
+              ${pkgs.curl}/bin/curl -L https://github.com/googlefonts/roboto/releases/download/v2.138/roboto-unhinted.zip -o "$FONTS_DIR/roboto.zip" || true
+              ${pkgs.unzip}/bin/unzip -o "$FONTS_DIR/roboto.zip" -d "$FONTS_DIR/roboto" >/dev/null 2>&1 || true
+              rm -f "$FONTS_DIR/roboto.zip" || true
+            fi
+
             if [ ! -d "$FONTS_DIR/font-awesome" ]; then
               echo "Downloading Font Awesome..."
               mkdir -p "$FONTS_DIR/font-awesome"
@@ -80,8 +88,10 @@
             <?xml version="1.0"?>
             <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
             <fontconfig>
-              <dir>$FONTS_DIR/source-sans-pro</dir>
-              <dir>$FONTS_DIR/font-awesome</dir>
+              <dir>$FONTS_DIR/source-sans-pro/source-sans-3.046R/OTF</dir>
+              <dir>$FONTS_DIR/source-sans-pro/source-sans-3.046R/TTF</dir>
+              <dir>$FONTS_DIR/roboto</dir>
+              <dir>$FONTS_DIR/font-awesome/fontawesome-free-6.4.2-desktop/otfs</dir>
               <dir>~/.local/share/fonts</dir>
               <dir>/usr/share/fonts</dir>
               <dir>/usr/local/share/fonts</dir>
