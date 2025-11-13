@@ -122,24 +122,24 @@ My research interests lie in designing efficient systems for machine learning wo
   title-link: "https://sky.cs.berkeley.edu/",
   location: "University of California, Berkeley",
   date: "July 2025 - December 2025",
-  description: [Research Intern, advised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Ion Stoica]]; working with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Joseph Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Matei Zaharia]]],
+  description: [Research Intern, advised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Ion Stoica]]; worked with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Joseph Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Matei Zaharia]]],
 )
 
 #resume-item[
   - *@skynomad-paper: Multi-Region Spot Instance Scheduling*
-    - Design a multi-region spot scheduling system that addresses single-region availability bottlenecks for deadline-sensitive workloads via Unified Cost Model trading off cross-region opportunities vs. egress costs
-    - Achieve 50% cost reduction over SOTA, saving \$1,000+ per training job vs. AWS SageMaker in large-scale experiments
-    - Co-lead project with PhD student: design methodology and build a complete simulation framework
+    - Designed a multi-region spot scheduling system that addressed single-region availability bottlenecks for deadline-sensitive workloads via Unified Cost Model trading off cross-region opportunities vs. egress costs
+    - Achieved 50% cost reduction over SOTA, saved \$1,000+ per training job vs. AWS SageMaker in large-scale experiments
+    - Co-led project with PhD student: designed methodology and built a complete simulation framework
 
   - *@leann-paper: Storage-Efficient Compound AI Systems*
-    - Co-design a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
-    - Achieve 97% storage reduction with \<5% latency impact; lead open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
-    - Implement the algorithm extending `FAISS` C++; build evaluation framework; contributing 70% codebase
+    - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
+    - Achieved 97% storage reduction with \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
+    - Implemented the algorithm extending `FAISS` C++; built evaluation framework; contributed 70% codebase
 
   - *AI-driven systems research*
-    - Investigate automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
-    - Lead case study in @barbarians-paper demonstrating 30% improvement over SOTA
-    - Co-develop @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS tasks
+    - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
+    - Led case study in @barbarians-paper demonstrating 30% improvement over SOTA
+    - Co-developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS tasks
 ]
 
 
@@ -154,7 +154,7 @@ My research interests lie in designing efficient systems for machine learning wo
 #resume-item[
   - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
     - Built research methodology and problem-framing skills through 30+ paper reviews and weekly discussions
-    - Developed a multi-cloud orchestration project achieving 45% cost savings through data placement and spot recovery
+    - Developed a multi-cloud orchestration project that achieved 45% cost savings through data placement and spot recovery
 ]
 
 #resume-entry(
@@ -278,8 +278,8 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, growing to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and widespread community adoption
-  - Co-designed technical outreach strategy including blog posts and social media campaign, engaging volunteers for cross-platform testing and validation
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and widespread community adoption
+  - Co-designed technical outreach strategy including blog posts and social media campaign, engaged volunteers for cross-platform testing and validation
 ]
 
 #metadata("skypilot-project-ref") <skypilot-project>
@@ -291,7 +291,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Top 10 contributor creating 70+ issues and merging 50+ pull requests; contributed 30,000+ lines of code changes
+  - Top 10 contributor; created 70+ issues and merged 50+ pull requests; contributed 30,000+ lines of code changes
   - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode
 ]
 
@@ -303,7 +303,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Architected scalable full-stack platform featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU
+  - Architected scalable full-stack platform that featured real-time collaboration and LLM-powered Q&A that served 1000+ DAU
 ]
 
 // #linebreak()
@@ -325,7 +325,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Led team of 6 TAs in teaching computer systems curriculum covering cache hierarchies and memory optimization to 200+ students
+  - Led team of 6 TAs in teaching computer systems curriculum that covered cache hierarchies and memory optimization to 200+ students
 ]
 
 #resume-entry(
@@ -336,8 +336,8 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem
-  - Led 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment
+  - Organized 10+ tech talks with 500+ attendees that explored Functional Programming to Rust ecosystem
+  - Led 100+ members across 6 departments, fostered a startup atmosphere and inclusive environment
 ]
 
 // TODO: think about the startup stuff.
