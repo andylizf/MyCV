@@ -103,7 +103,7 @@
 
 // maybe keywords? or at least stressing some words
 
-My research interests lie in designing efficient systems for ML, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems addressing the growing resource demands of diverse AI applications.
+My research interests lie in *designing efficient systems for ML*, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems addressing the growing resource demands of diverse AI applications.
 I am also interested in exploring how AI techniques can advance systems design methodologies.
 
 // = Education
@@ -134,8 +134,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 #resume-item[
   #v(0.3em)
   - *@skynomad-paper: Multi-Region Spot Instance Scheduling* (submmited to #strong("OSDI '26"))
-    - Designed a multi-region spot instance scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region opportunities vs. egress costs
-    // cross-region opportunities?
+    - Designed a multi-region spot instance scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region availability and pricing vs. migration costs
     - Achieved 50% cost reduction over the SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
     - Led project from research formulation to implementation, drove methodology design, and built simulation framework
 
@@ -179,7 +178,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 )
 
 #resume-item[
-  - Member of Turing Honors Class, an elite CS program for top talented students
+  - Member of Turing Honors Class, an elite CS program for top students
   // top talented
   - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
 ]
@@ -310,28 +309,28 @@ I am also interested in exploring how AI techniques can advance systems design m
 = Services
 
 #resume-entry(
-  title: "Artifact Evaluation Committee",
-  location: "USENIX ATC '25",
-  date: "2025",
+  title: "USENIX ATC '25 Artifact Evaluation Committee",
+  // location: "",
+  date: "May 2025",
   description: "Reviewer",
 )
 
 #resume-entry(
   title: "Introduction to Computer Systems (ICS)",
-  location: "Renmin University of China",
-  date: "Fall 2024",
-  description: "Head Teaching Assistant",
+  // location: "Renmin University of China",
+  date: "Fall 2024, Spring 2025",
+  description: [#strong("Head") Teaching Assistant],
 )
 
 #resume-item[
-  - Led team of 6 TAs in teaching computer systems curriculum that covered cache hierarchies and memory optimization to 200+ students
+  - Led 6 TAs in teaching systems curriculum that covered cache hierarchies and memory optimization to 200+ students
   // line
 ]
 
 #resume-entry(
   title: "RUC Computer Association",
-  location: "Renmin University of China",
-  date: "2024.7 - 2025.7",
+  // location: "Renmin University of China",
+  date: "July 2024 - July 2025",
   description: "President",
 )
 
@@ -342,8 +341,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 
 #resume-entry(
   title: "Cheese Tech",
-  location: gh_repo("SageSeekerSociety/cheese-backend"),
-  //
+  // location: gh_repo("SageSeekerSociety/cheese-backend", label: "Cheese"),
   date: "September 2023 - October 2024",
   description: "Co-founder",
 )
@@ -434,24 +432,32 @@ I am also interested in exploring how AI techniques can advance systems design m
     text(weight: 900)[CUDA],
     "Rust",
     "TypeScript",
-    "PyTorch",
-    "Typst",
-    "Nix",
-    "SkyPilot",
-    "NeMo",
-    "verl",
   ),
 )
 #resume-skill-item(
-  "Technical",
+  "Tools",
   (
-    text(weight: 900)[Distributed Systems],
-    text(weight: 900)[Parallel Computing],
-    "Performance Optimization",
-    "Cloud Infrastructure",
-    "Open-Source Project Development",
+    text(weight: 900)[PyTorch],
+    text(weight: 900)[SkyPilot],
+    "NeMo",
+    "Ray",
+    "Kubernetes",
+    "verl",
+    "Nix",
+    "Typst",
   ),
 )
+
+// #resume-skill-item(
+//   "Technical",
+//   (
+//     text(weight: 900)[Distributed Systems],
+//     text(weight: 900)[Parallel Computing],
+//     "Performance Optimization",
+//     "Cloud Infrastructure",
+//     "Open-Source Project Development",
+//   ),
+// )
 // #resume-skill-item(
 //   "Laboratory",
 //   ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring"),
