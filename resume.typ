@@ -101,6 +101,8 @@
 
 = Research Interests
 
+// maybe keywords? or at least stressing some words
+
 My research interests lie in designing efficient systems for ML, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems addressing the growing resource demands of diverse AI applications.
 I am also interested in exploring how AI techniques can advance systems design methodologies.
 
@@ -132,7 +134,8 @@ I am also interested in exploring how AI techniques can advance systems design m
 #resume-item[
   #v(0.3em)
   - *@skynomad-paper: Multi-Region Spot Instance Scheduling* (submmited to #strong("OSDI '26"))
-    - Designed a multi-region spot scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region opportunities vs. egress costs
+    - Designed a multi-region spot instance scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region opportunities vs. egress costs
+    // cross-region opportunities?
     - Achieved 50% cost reduction over the SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
     - Led project from research formulation to implementation, drove methodology design, and built simulation framework
 
@@ -143,7 +146,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 
   - *AI-driven Systems Research*
     - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
-    - Led case study in @barbarians-paper, which demonstrated 30% improvement over the SOTA
+    - Led case study in @barbarians-paper paper, which demonstrated 30% improvement over the SOTA
     - Co-developed @frontiercs-paper benchmark with problem specifications and evaluations for 40 open-ended problems
 ]
 
@@ -157,6 +160,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 )
 
 #resume-item[
+  // overlapped.
   - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
     - Developed a multi-cloud orchestration project that achieved 45% cost savings through data placement and spot usage
     - Built research methodology and problem-framing skills through 30+ paper reviews and weekly discussions
@@ -216,7 +220,7 @@ I am also interested in exploring how AI techniques can advance systems design m
     "Matei Zaharia",
     "Joseph Gonzalez",
   )],
-  venue: "MLSys '26 (in submission); ArXiv: 2506.08276",
+  venue: "MLSys '26 (in submission)",
 )
 
 #metadata("barbarians-ref") <barbarians-paper>
@@ -258,7 +262,7 @@ I am also interested in exploring how AI techniques can advance systems design m
     "Scott Shenker",
     "Ion Stoica",
   )],
-  venue: "EuroSys 2026; ArXiv: 2505.24095v2",
+  venue: "EuroSys 2026",
 )
 
 // #label("checkpoint")
@@ -321,6 +325,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 
 #resume-item[
   - Led team of 6 TAs in teaching computer systems curriculum that covered cache hierarchies and memory optimization to 200+ students
+  // line
 ]
 
 #resume-entry(
@@ -338,6 +343,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 #resume-entry(
   title: "Cheese Tech",
   location: gh_repo("SageSeekerSociety/cheese-backend"),
+  //
   date: "September 2023 - October 2024",
   description: "Co-founder",
 )
