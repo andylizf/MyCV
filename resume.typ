@@ -94,35 +94,10 @@
 
 = Research Interests
 
-My research interests lie in designing efficient systems for machine learning workloads, focusing on cloud resource orchestration, distributed training infrastructure, and storage-optimized serving. I am particularly interested in cross-layer optimizations and exploring how AI can fundamentally transform systems design methodologies.
+My research interests lie in designing efficient systems for machine learning workloads, focusing on cloud resource orchestration, distributed training infrastructure, and storage-optimized serving. I am particularly interested in cross-layer optimizations and exploring how AI techniques can advance systems design methodologies.
+// TODO: maybe not serving?
 
-// serving? transform->facilitate
-
-= Education
-
-#resume-entry(
-  title: underline()[University of California, Berkeley],
-  title-link: "https://www.berkeley.edu",
-  location: "Berkeley, CA, USA",
-  date: "August 2024 - December 2024",
-  description: "Exchange Student, Computer Science",
-)
-
-#resume-item[
-  - Cultivated research methodology and problem identification skills in #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems]] graduate seminar through paper analysis, critical evaluation, and research discussions.
-]
-
-#resume-entry(
-  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://www.ruc.edu.cn/")[Renmin University of China]] #h(6pt) #text(size: 8.5pt, fill: gray.darken(20%))[(Ranked #text(weight: 900)[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
-  location: "Beijing, China",
-  date: "September 2022 - June 2026 (Expected)",
-  description: "Bachelor's in Computer Science",
-)
-
-#resume-item[
-  - Member of Turing Honors Class, a selective computer science program for top-performing students.
-  - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
-]
+// = Education
 
 // #resume-entry(
 //  title: underline()[The High School Affiliated to Renmin University of China (RDFZ)],
@@ -138,37 +113,59 @@ My research interests lie in designing efficient systems for machine learning wo
 
 = Experience
 
-// Considering merging this w/ Education.
-
 #resume-entry(
   title: underline()[Sky Computing Lab],
   title-link: "https://sky.cs.berkeley.edu/",
   location: "University of California, Berkeley",
   date: "July 2025 - December 2025",
-  description: [Research Intern, supervised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Ion Stoica]]; Worked with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Joseph E. Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Matei Zaharia]]],
+  description: [Research Intern, advised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Ion Stoica]]; working with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Joseph Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Matei Zaharia]]],
 )
 
 #resume-item[
-  // paper title
   - *Designed @skynomad-paper for multi-region Spot Instance scheduling.*
     - Addressed fundamental single-region availability bottleneck with Unified Cost Model trading off cross-region opportunities vs egress costs
     - Achieved 50% cost reduction over SOTA, \$1,000 savings vs AWS SageMaker
-    - Co-led project with PhD student, owned complete methodology design and simulation framework implementation
-    // owned?
+    - Co-led project with PhD student, driving methodology design and simulation framework implementation
 
   - *Developed @leann-paper for storage-efficient compound AI systems.*
-    - Identified critical need for storage-efficient vector search in RAG pipeline where storage costs dominate
-    // identified criticle need?
-    - Co-designed two-level recompute algorithm extending FAISS C++; built evaluation framework achieving 97% storage reduction
+    - Tackled storage bottleneck in RAG pipelines where vector index size dominates infrastructure costs
+    - Co-designed two-level recompute algorithm extending `FAISS` C++; built evaluation framework achieving 97% storage reduction
     - Led research-to-production translation contributing 70% of codebase; reached #link(<leann-project>)[4,000+ stars on GitHub]
 
   - *Explored AI-driven systems research.*
     - Designed evolution pipelines for OpenEvolve/GEPA demonstrating automated systems research capabilities
-    - Led primary case study in @barbarians-paper achieving 30% improvement over NSDI best paper via evolutionary search
-    // NSDI best paper?
-    - Developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS research tasks
+    - Led primary case study in @barbarians-paper achieving 30% improvement over state-of-the-art baseline via evolutionary search
+    - Co-developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS research tasks
     // co-developed.
 ]
+
+
+#resume-entry(
+  title: underline()[University of California, Berkeley],
+  title-link: "https://www.berkeley.edu",
+  location: "Berkeley, CA, USA",
+  date: "August 2024 - December 2024",
+  description: "Exchange Student, Computer Science",
+)
+
+#resume-item[
+  - Cultivated research methodology and problem identification skills in #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems]] graduate seminar through paper analysis, critical evaluation, and research discussions.
+  -   // - Designed and implemented multi-cloud AI workflow orchestration system with data placement optimization, parallel execution support, and dynamic spot instance recovery built upon SkyPilot.
+  // - Achieved 45% reduction in total cost while maintaining performance through smart data placement, creating first comprehensive solution for multi-cloud AI workflows with simplified management.
+]
+
+#resume-entry(
+  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://www.ruc.edu.cn/")[Renmin University of China]] #h(6pt) #text(size: 8.5pt, fill: gray.darken(20%))[(Ranked #text(weight: 900)[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
+  location: "Beijing, China",
+  date: "September 2022 - June 2026 (Expected)",
+  description: "Bachelor's in Computer Science",
+)
+
+#resume-item[
+  - Member of Turing Honors Class, a selective computer science program for top-performing students.
+  - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
+]
+
 
 // #resume-entry(
 //  title: "Key Laboratory of DEKE",
@@ -257,8 +254,6 @@ My research interests lie in designing efficient systems for machine learning wo
 #resume-item[
   - Top 10 contributor creating 70+ issues and merging 50+ pull requests; contributed 30,000+ lines of code changes
   - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode
-  // - Designed and implemented multi-cloud AI workflow orchestration system with data placement optimization, parallel execution support, and dynamic spot instance recovery built upon SkyPilot.
-  // - Achieved 45% reduction in total cost while maintaining performance through smart data placement, creating first comprehensive solution for multi-cloud AI workflows with simplified management.
 ]
 
 #resume-entry(
@@ -276,7 +271,12 @@ My research interests lie in designing efficient systems for machine learning wo
 
 = Services
 
-// AEC Reviewer
+#resume-entry(
+  title: "Artifact Evaluation Committee",
+  location: "USENIX ATC '25",
+  date: "2025",
+  description: "Reviewer",
+)
 
 #resume-entry(
   title: "Introduction to Computer Systems (ICS)",
@@ -286,8 +286,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  // CacheLab? GPU memory optimization. adopted 200 students.
-  - Led 6 TAs and redesigned CacheLab demonstrating modern GPU memory coalescing for 200+ students.
+  - Led team of 6 TAs in teaching computer systems curriculum covering cache hierarchies and memory optimization to 200+ students.
 ]
 
 #resume-entry(
