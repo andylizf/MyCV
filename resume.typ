@@ -1,5 +1,28 @@
 #import "@local/modern-cv:0.7.0": *
 
+#let myname(showstar: false) = {
+  if showstar {
+    [#text(weight: 900)[Zhifei Li]#text(weight: 900, size: 1.2em)[\*]]
+  } else {
+    text(weight: 900)[Zhifei Li]
+  }
+}
+
+#let format-authors(..authors) = {
+  let author-list = authors.pos()
+  let formatted = ()
+  for author in author-list {
+    if author == "me" {
+      formatted.push(myname(showstar: false))
+    } else if author == "me*" {
+      formatted.push(myname(showstar: true))
+    } else {
+      formatted.push(text(style: "italic")[#author])
+    }
+  }
+  formatted.join(", ")
+}
+
 #let gh_repo(repo_full, stars: none, label: none) = {
   // GitHub icon + repo name with optional stars count
   let _label = if label == none { str(repo_full).split("/").last() } else { label }
@@ -73,6 +96,8 @@
 
 My research interests lie in designing efficient systems for machine learning workloads, focusing on cloud resource orchestration, distributed training infrastructure, and storage-optimized serving. I am particularly interested in cross-layer optimizations and exploring how AI can fundamentally transform systems design methodologies.
 
+// serving? transform->facilitate
+
 = Education
 
 #resume-entry(
@@ -88,7 +113,7 @@ My research interests lie in designing efficient systems for machine learning wo
 ]
 
 #resume-entry(
-  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://www.ruc.edu.cn/")[Renmin University of China]] #h(6pt) #text(size: 8.5pt, fill: gray.darken(20%))[(Ranked #text(weight: "black")[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
+  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://www.ruc.edu.cn/")[Renmin University of China]] #h(6pt) #text(size: 8.5pt, fill: gray.darken(20%))[(Ranked #text(weight: 900)[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
   description: "Bachelor's in Computer Science",
@@ -96,7 +121,7 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-item[
   - Member of Turing Honors Class, a selective computer science program for top-performing students.
-  - GPA: 3.8/4.0 (Top 5%, Ranked #strong("5/136", delta: 900))
+  - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
 ]
 
 // #resume-entry(
@@ -113,29 +138,36 @@ My research interests lie in designing efficient systems for machine learning wo
 
 = Experience
 
+// Considering merging this w/ Education.
+
 #resume-entry(
   title: underline()[Sky Computing Lab],
   title-link: "https://sky.cs.berkeley.edu/",
   location: "University of California, Berkeley",
-  date: "July 2025 - December 2025 (Expected)",
-  description: [Research Intern, supervised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Prof. Ion Stoica]]],
+  date: "July 2025 - December 2025",
+  description: [Research Intern, supervised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Ion Stoica]]; Worked with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Joseph E. Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Matei Zaharia]]],
 )
 
 #resume-item[
+  // paper title
   - *Designed @skynomad-paper for multi-region Spot Instance scheduling.*
     - Addressed fundamental single-region availability bottleneck with Unified Cost Model trading off cross-region opportunities vs egress costs
+    - Achieved 50% cost reduction over SOTA, \$1,000 savings vs AWS SageMaker
     - Co-led project with PhD student, owned complete methodology design and simulation framework implementation
-    - Built production system extending #link(<skypilot-project>)[SkyPilot]; achieved 50% cost reduction over SOTA, \$1,000 savings vs AWS SageMaker
+    // owned?
+
+  - *Developed @leann-paper for storage-efficient compound AI systems.*
+    - Identified critical need for storage-efficient vector search in RAG pipeline where storage costs dominate
+    // identified criticle need?
+    - Co-designed two-level recompute algorithm extending FAISS C++; built evaluation framework achieving 97% storage reduction
+    - Led research-to-production translation contributing 70% of codebase; reached #link(<leann-project>)[4,000+ stars on GitHub]
 
   - *Explored AI-driven systems research.*
     - Designed evolution pipelines for OpenEvolve/GEPA demonstrating automated systems research capabilities
     - Led primary case study in @barbarians-paper achieving 30% improvement over NSDI best paper via evolutionary search
+    // NSDI best paper?
     - Developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS research tasks
-
-  - *Developed @leann-paper for storage-efficient compound AI systems.*
-    - Identified critical need for storage-efficient vector search in RAG pipeline where storage costs dominate
-    - Co-designed two-level recompute algorithm extending FAISS C++; built evaluation framework achieving 97% storage reduction
-    - Led research-to-production translation contributing 70% of codebase; reached #link(<leann-project>)[4,000+ stars on GitHub]
+    // co-developed.
 ]
 
 // #resume-entry(
@@ -156,34 +188,34 @@ My research interests lie in designing efficient systems for machine learning wo
 #metadata("skynomad-ref") <skynomad-paper>
 #resume-publication(
   title: paper("SkyNomad: Cost-Effective Multi-Region Scheduling for Deadline-Sensitive Workloads on Spot Instances"),
-  authors: [#strong("Zhifei Li*"), Tian Xia\*, #text(style: "italic")[et al.], Scott Shenker, Ion Stoica],
+  authors: [#format-authors("me*", "Tian Xia*", "et al.", "Scott Shenker", "Ion Stoica")],
   venue: "OSDI '26 (in submission)",
 )
 
 #metadata("leann-ref") <leann-paper>
 #resume-publication(
   title: paper("LEANN: A Low-Storage Overhead Vector Index", url: "https://arxiv.org/abs/2506.08276"),
-  authors: [Yichuan Wang, #strong("Zhifei Li"), Shu Liu, #text(style: "italic")[et al.], Ion Stoica, Sewon Min, Matei Zaharia, Joseph Gonzalez],
+  authors: [#format-authors("Yichuan Wang", "me", "Shu Liu", "et al.", "Ion Stoica", "Sewon Min", "Matei Zaharia", "Joseph Gonzalez")],
   venue: "MLSys '26 (in submission)",
 )
 
 #metadata("barbarians-ref") <barbarians-paper>
 #resume-publication(
   title: paper("Barbarians at the Gate: How AI is Upending Systems Research", url: "https://arxiv.org/abs/2510.06189"),
-  authors: [Audrey Cheng\*, Shu Liu\*, Melissa Pan\*, #strong("Zhifei Li"), Bowen Wang, #text(style: "italic")[et al.], Ion Stoica],
+  authors: [#format-authors("Audrey Cheng*", "Shu Liu*", "Melissa Pan*", "me", "Bowen Wang", "et al.", "Ion Stoica")],
   venue: "arXiv",
 )
 
 #metadata("frontiercs-ref") <frontiercs-paper>
 #resume-publication(
   title: paper("FrontierCS: The Next Frontier of Computer Science"),
-  authors: [Qiuyang Mang\*, Wenhao Cai\*, #strong("Zhifei Li*"), Huanzhi Mao\*, #text(style: "italic")[et al.],  Ion Stoica, Jingbo Shang, Zhuang Liu, Alvin Cheung],
+  authors: [#format-authors("Qiuyang Mang*", "Wenhao Cai*", "me*", "Huanzhi Mao*", "et al.", "Ion Stoica", "Jingbo Shang", "Zhuang Liu", "Alvin Cheung")],
   venue: "arXiv",
 )
 
 #resume-publication(
   title: paper("SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference", url: "https://arxiv.org/abs/2505.24095v2"),
-  authors: [Tian Xia, Ziming Mao, Jamison Kerney, Ethan J. Jackson, #strong("Zhifei Li"), Jiarong Xing, Scott Shenker, Ion Stoica],
+  authors: [#format-authors("Tian Xia", "Ziming Mao", "Jamison Kerney", "Ethan J. Jackson", "me", "Jiarong Xing", "Scott Shenker", "Ion Stoica")],
   venue: "EuroSys 2026",
 )
 
@@ -198,44 +230,6 @@ My research interests lie in designing efficient systems for machine learning wo
 //   - Performed extensive refactoring and bug fixes across SkyPilot modules, improving code maintainability and reliability.
 //   - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
 // ]
-
-= Honors and Awards
-
-#resume-award-entry(
-  title: [Elite Collegiate Award, China Computer Federation #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(\<100 recipients nationally)]],
-  date: "August 2025",
-  // description: "China Computer Federation",
-)
-
-#resume-award-entry(
-  title: "Dean's Scholarship, Gaoling School of AI",
-  date: "May 2025",
-  // description: "Gaoling School of Artificial Intelligence",
-)
-
-#resume-award-entry(
-  title: [National Scholarship #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(Top 0.2% nationally)]],
-  date: "September 2024",
-  // organization: "Ministry of Education (China)",
-)
-
-#resume-award-entry(
-  title: "First Place, Computer Comprehensive Ability Competition (Systems Track)",
-  date: "May 2024",
-  // organization: "Renmin University of China",
-)
-
-#resume-award-entry(
-  title: "First-Class Scholarship for Social Work and Volunteer Service",
-  date: "September 2023",
-  // organization: "Renmin University of China",
-)
-
-#resume-award-entry(
-  title: "First Prize, National Olympiad in Informatics in Provinces (NOIP), China",
-  date: "December 2019",
-  // organization: "China Computer Federation",
-)
 
 = Projects
 
@@ -282,6 +276,8 @@ My research interests lie in designing efficient systems for machine learning wo
 
 = Services
 
+// AEC Reviewer
+
 #resume-entry(
   title: "Introduction to Computer Systems (ICS)",
   location: "Renmin University of China",
@@ -290,6 +286,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
+  // CacheLab? GPU memory optimization. adopted 200 students.
   - Led 6 TAs and redesigned CacheLab demonstrating modern GPU memory coalescing for 200+ students.
 ]
 
@@ -305,17 +302,59 @@ My research interests lie in designing efficient systems for machine learning wo
  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment.
 ]
 
+// think about the startup stuff.
+
+= Honors and Awards
+
+#resume-award-entry(
+  title: [Elite Collegiate Award, China Computer Federation #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(\<100 recipients nationally)]],
+  date: "August 2025",
+  // description: "China Computer Federation",
+)
+
+#resume-award-entry(
+  title: "Dean's Scholarship, Gaoling School of AI",
+  // out of ...
+  date: "May 2025",
+  // description: "Gaoling School of Artificial Intelligence",
+)
+
+#resume-award-entry(
+  title: [National Scholarship #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(Top 0.2% nationally)]],
+  date: "September 2024",
+  // organization: "Ministry of Education (China)",
+)
+
+#resume-award-entry(
+  title: "First Place, Computer Comprehensive Ability Competition (Systems Track)",
+  date: "May 2024",
+  // organization: "Renmin University of China",
+)
+
+#resume-award-entry(
+  title: "First-Class Scholarship for Social Work and Volunteer Service",
+  date: "September 2023",
+  // organization: "Renmin University of China",
+)
+
+#resume-award-entry(
+  title: "First Prize, National Olympiad in Informatics in Provinces (NOIP), China",
+  date: "December 2019",
+  // organization: "China Computer Federation",
+)
+
+
 = Skills
 
 #resume-skill-item(
   "Coding",
-  (strong("C++"), strong("Python"), strong("CUDA"), "Rust", "Typescript", "PyTorch"),
+  (text(weight: 900)[C++], text(weight: 900)[Python], text(weight: 900)[CUDA], "Rust", "Typescript", "PyTorch"),
 )
 #resume-skill-item(
   "Technical",
   (
-    strong("Distributed Systems"),
-    strong("Parallel Computing"),
+    text(weight: 900)[Distributed Systems"],
+    text(weight: 900)[Parallel Computing],
     "Performance Optimization",
     "Cloud Infrastructure",
     "Open-Source Project Development",
