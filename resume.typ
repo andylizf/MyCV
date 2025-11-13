@@ -29,7 +29,11 @@
   set box(height: 11pt)
 
   align(right + horizon)[
-    #box(baseline: 15%)[#fa-icon("github", fill: color-darkgray)] #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/" + repo_full, _label)]#if stars != none {
+    #box(baseline: 15%)[#fa-icon("github", fill: color-darkgray)] #underline(
+      evade: false,
+      stroke: 0.5pt,
+      offset: 0.2em,
+    )[#link("https://github.com/" + repo_full, _label)]#if stars != none {
       h(4pt)
       box(baseline: 15%)[#text(size: 8.5pt, fill: gray.darken(20%))[(#h(1pt)#stars#h(2pt)#text(size: 12pt)[★]#h(1pt))]]
     }
@@ -132,7 +136,7 @@ My research interests lie in designing efficient systems for machine learning wo
     - Achieves 97% storage reduction with \<5% latency impact; reached #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
     - Co-designed algorithm extending `FAISS` C++; built evaluation framework; led open-source implementation contributing 70% codebase
 
-  - *Explored AI-driven systems research.*
+  - *Explored AI-driven systems research*
     - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
     - Led case study in @barbarians-paper achieving 30% improvement over SOTA demonstrating automated research capabilities
     - Co-developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS tasks
@@ -154,14 +158,19 @@ My research interests lie in designing efficient systems for machine learning wo
 ]
 
 #resume-entry(
-  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://www.ruc.edu.cn/")[Renmin University of China]] #h(6pt) #text(size: 8.5pt, fill: gray.darken(20%))[(Ranked #text(weight: 900)[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
+  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(
+      "https://www.ruc.edu.cn/",
+    )[Renmin University of China]] #h(6pt) #text(
+      size: 8.5pt,
+      fill: gray.darken(20%),
+    )[(Ranked #text(weight: 900)[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
   description: "Bachelor's in Computer Science",
 )
 
 #resume-item[
-  - Member of Turing Honors Class, an elite CS program for top talented students.
+  - Member of Turing Honors Class, an elite CS program for top talented students
   - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
 ]
 
@@ -191,7 +200,16 @@ My research interests lie in designing efficient systems for machine learning wo
 #metadata("leann-ref") <leann-paper>
 #resume-publication(
   title: paper("LEANN: A Low-Storage Overhead Vector Index", url: "https://arxiv.org/abs/2506.08276"),
-  authors: [#format-authors("Yichuan Wang", "me", "Shu Liu", "et al.", "Ion Stoica", "Sewon Min", "Matei Zaharia", "Joseph Gonzalez")],
+  authors: [#format-authors(
+    "Yichuan Wang",
+    "me",
+    "Shu Liu",
+    "et al.",
+    "Ion Stoica",
+    "Sewon Min",
+    "Matei Zaharia",
+    "Joseph Gonzalez",
+  )],
   venue: "MLSys '26 (in submission)",
 )
 
@@ -205,13 +223,35 @@ My research interests lie in designing efficient systems for machine learning wo
 #metadata("frontiercs-ref") <frontiercs-paper>
 #resume-publication(
   title: paper("FrontierCS: The Next Frontier of Computer Science"),
-  authors: [#format-authors("Qiuyang Mang*", "Wenhao Cai*", "me*", "Huanzhi Mao*", "et al.", "Ion Stoica", "Jingbo Shang", "Zhuang Liu", "Alvin Cheung")],
+  authors: [#format-authors(
+    "Qiuyang Mang*",
+    "Wenhao Cai*",
+    "me*",
+    "Huanzhi Mao*",
+    "et al.",
+    "Ion Stoica",
+    "Jingbo Shang",
+    "Zhuang Liu",
+    "Alvin Cheung",
+  )],
   venue: "arXiv",
 )
 
 #resume-publication(
-  title: paper("SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference", url: "https://arxiv.org/abs/2505.24095v2"),
-  authors: [#format-authors("Tian Xia", "Ziming Mao", "Jamison Kerney", "Ethan J. Jackson", "me", "Jiarong Xing", "Scott Shenker", "Ion Stoica")],
+  title: paper(
+    "SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference",
+    url: "https://arxiv.org/abs/2505.24095v2",
+  ),
+  authors: [#format-authors(
+    "Tian Xia",
+    "Ziming Mao",
+    "Jamison Kerney",
+    "Ethan J. Jackson",
+    "me",
+    "Jiarong Xing",
+    "Scott Shenker",
+    "Ion Stoica",
+  )],
   venue: "EuroSys 2026",
 )
 
@@ -227,7 +267,7 @@ My research interests lie in designing efficient systems for machine learning wo
 //   - Actively engaged in dev meetings and community discussions, driving feature planning and design decisions.
 // ]
 
-= Projects
+= Open-Source Projects
 
 #metadata("leann-project-ref") <leann-project>
 #resume-entry(
@@ -238,8 +278,8 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, growing to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and widespread community adoption.
-  - Co-designed technical outreach strategy including blog posts and social media campaign, engaging volunteers for cross-platform testing and validation.
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, growing to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and widespread community adoption
+  - Co-designed technical outreach strategy including blog posts and social media campaign, engaging volunteers for cross-platform testing and validation
 ]
 
 #metadata("skypilot-project-ref") <skypilot-project>
@@ -263,7 +303,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Architected scalable full-stack platform featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU.
+  - Architected scalable full-stack platform featuring real-time collaboration and LLM-powered Q&A serving 1000+ DAU
 ]
 
 // #linebreak()
@@ -285,7 +325,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Led team of 6 TAs in teaching computer systems curriculum covering cache hierarchies and memory optimization to 200+ students.
+  - Led team of 6 TAs in teaching computer systems curriculum covering cache hierarchies and memory optimization to 200+ students
 ]
 
 #resume-entry(
@@ -296,8 +336,8 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
- - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem.
- - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment.
+  - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem
+  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment
 ]
 
 // TODO: think about the startup stuff.
@@ -311,37 +351,63 @@ My research interests lie in designing efficient systems for machine learning wo
 }
 
 #resume-award-entry(
-  title: [#text(style: "italic", weight: "regular")[Elite Collegiate Award, China Computer Federation] #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(\<100 recipients nationally)]],
+  title: [#text(style: "italic", weight: "regular")[Elite Collegiate Award, China Computer Federation] #text(
+      size: 9pt,
+      fill: gray.darken(20%),
+      weight: "light",
+    )[(\<100 recipients nationally)]],
   date: "August 2025",
   // description: "China Computer Federation",
 )
 
 #resume-award-entry(
-  title: [#text(style: "italic", weight: "regular")[Dean's Scholarship, Gaoling School of AI] #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(15 out of 2000 per year)]],
+  title: [#text(style: "italic", weight: "regular")[Dean's Scholarship, Gaoling School of AI] #text(
+      size: 9pt,
+      fill: gray.darken(20%),
+      weight: "light",
+    )[(15 out of 2000 per year)]],
   date: "May 2025",
   // description: "Gaoling School of Artificial Intelligence",
 )
 
 #resume-award-entry(
-  title: [#text(style: "italic", weight: "regular")[National Scholarship] #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(Top 0.2% nationally)]],
+  title: [#text(style: "italic", weight: "regular")[National Scholarship] #text(
+      size: 9pt,
+      fill: gray.darken(20%),
+      weight: "light",
+    )[(Top 0.2% nationally)]],
   date: "September 2024",
   // organization: "Ministry of Education (China)",
 )
 
-#resume-award-entry(
-  title: [#text(style: "italic", weight: "regular")[First Place, Computer Comprehensive Ability Competition (Systems Track)]],
-  date: "May 2024",
-  // organization: "Renmin University of China",
-)
+// #resume-award-entry(
+//   title: [#text(
+//     style: "italic",
+//     weight: "regular",
+//   )[First Place, Computer Comprehensive Ability Competition (Systems Track)]],
+//   date: "May 2024",
+//   // organization: "Renmin University of China",
+// )
 
 #resume-award-entry(
-  title: [#text(style: "italic", weight: "regular")[First-Class Scholarship for Social Work and Volunteer Service]],
+  title: [#text(
+      style: "italic",
+      weight: "regular",
+    )[First-Class Scholarship for Social Work and Volunteer Service] #text(
+      size: 9pt,
+      fill: gray.darken(20%),
+      weight: "light",
+    )[(48 out of 35,000 per year)]],
   date: "September 2023",
   // organization: "Renmin University of China",
 )
 
 #resume-award-entry(
-  title: [#text(style: "italic", weight: "regular")[First Prize, National Olympiad in Informatics in Provinces (NOIP), China]],
+  title: [#text(style: "italic", weight: "regular")[First Prize, National Olympiad in Informatics, Beijing] #text(
+      size: 9pt,
+      fill: gray.darken(20%),
+      weight: "light",
+    )[(300 per year)]],
   date: "December 2019",
   // organization: "China Computer Federation",
 )
