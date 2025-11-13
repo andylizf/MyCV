@@ -129,7 +129,7 @@ My research interests lie in designing efficient systems for machine learning wo
 
   - *@leann-paper: Storage-Efficient Compound AI Systems*
     - Tackles storage bottleneck in RAG pipelines where vector indices incur 10-100× overhead with two-level recompute algorithm
-    - Achieves 97% storage reduction with \<5% latency impact; reached #link(<leann-project>)[4,000+ GitHub stars]
+    - Achieves 97% storage reduction with \<5% latency impact; reached #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
     - Co-designed algorithm extending `FAISS` C++; built evaluation framework; led open-source implementation contributing 70% codebase
 
   - *Explored AI-driven systems research.*
@@ -161,7 +161,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Member of Turing Honors Class, a selective computer science program for top-performing students.
+  - Member of Turing Honors Class, an elite CS program for top talented students.
   - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
 ]
 
@@ -238,7 +238,7 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, growing to 4,000+ GitHub stars with 3 active external contributors and widespread community adoption.
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, growing to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and widespread community adoption.
   - Co-designed technical outreach strategy including blog posts and social media campaign, engaging volunteers for cross-platform testing and validation.
 ]
 
@@ -356,7 +356,7 @@ My research interests lie in designing efficient systems for machine learning wo
 #resume-skill-item(
   "Technical",
   (
-    text(weight: 900)[Distributed Systems"],
+    text(weight: 900)[Distributed Systems],
     text(weight: 900)[Parallel Computing],
     "Performance Optimization",
     "Cloud Infrastructure",
