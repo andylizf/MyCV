@@ -301,43 +301,48 @@ My research interests lie in designing efficient systems for machine learning wo
  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment.
 ]
 
-// think about the startup stuff.
+// TODO: think about the startup stuff.
 
 = Honors and Awards
 
+#let resume-award-entry(title: "", date: "") = {
+  block(above: 1em, below: 1em)[
+    #resume-certification(title, date)
+  ]
+}
+
 #resume-award-entry(
-  title: [Elite Collegiate Award, China Computer Federation #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(\<100 recipients nationally)]],
+  title: [#text(style: "italic", weight: "regular")[Elite Collegiate Award, China Computer Federation] #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(\<100 recipients nationally)]],
   date: "August 2025",
   // description: "China Computer Federation",
 )
 
 #resume-award-entry(
-  title: "Dean's Scholarship, Gaoling School of AI",
-  // out of ...
+  title: [#text(style: "italic", weight: "regular")[Dean's Scholarship, Gaoling School of AI] #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(15 out of 2000 per year)]],
   date: "May 2025",
   // description: "Gaoling School of Artificial Intelligence",
 )
 
 #resume-award-entry(
-  title: [National Scholarship #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(Top 0.2% nationally)]],
+  title: [#text(style: "italic", weight: "regular")[National Scholarship] #text(size: 9pt, fill: gray.darken(20%), weight: "light")[(Top 0.2% nationally)]],
   date: "September 2024",
   // organization: "Ministry of Education (China)",
 )
 
 #resume-award-entry(
-  title: "First Place, Computer Comprehensive Ability Competition (Systems Track)",
+  title: [#text(style: "italic", weight: "regular")[First Place, Computer Comprehensive Ability Competition (Systems Track)]],
   date: "May 2024",
   // organization: "Renmin University of China",
 )
 
 #resume-award-entry(
-  title: "First-Class Scholarship for Social Work and Volunteer Service",
+  title: [#text(style: "italic", weight: "regular")[First-Class Scholarship for Social Work and Volunteer Service]],
   date: "September 2023",
   // organization: "Renmin University of China",
 )
 
 #resume-award-entry(
-  title: "First Prize, National Olympiad in Informatics in Provinces (NOIP), China",
+  title: [#text(style: "italic", weight: "regular")[First Prize, National Olympiad in Informatics in Provinces (NOIP), China]],
   date: "December 2019",
   // organization: "China Computer Federation",
 )
