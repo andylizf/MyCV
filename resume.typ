@@ -127,19 +127,19 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-item[
   - *@skynomad-paper: Multi-Region Spot Instance Scheduling*
-    - Addresses single-region availability bottleneck for deadline-sensitive workloads with Unified Cost Model trading off cross-region opportunities vs egress costs
-    - Achieves 50% cost reduction over state-of-the-art; saves \$1,000+ per training job vs AWS SageMaker
-    - Co-led project with PhD student: drove methodology design and built complete simulation framework
+    - Design a multi-region spot scheduling system that addresses single-region availability bottlenecks for deadline-sensitive workloads via Unified Cost Model trading off cross-region opportunities vs. egress costs
+    - Achieve 50% cost reduction over SOTA, saving \$1,000+ per training job vs. AWS SageMaker in large-scale experiments
+    - Co-lead project with PhD student: design methodology and build a complete simulation framework
 
   - *@leann-paper: Storage-Efficient Compound AI Systems*
-    - Tackles storage bottleneck in RAG pipelines where vector indices incur 10-100× overhead with two-level recompute algorithm
-    - Achieves 97% storage reduction with \<5% latency impact; reached #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
-    - Co-designed algorithm extending `FAISS` C++; built evaluation framework; led open-source implementation contributing 70% codebase
+    - Co-design a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
+    - Achieve 97% storage reduction with \<5% latency impact; lead open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
+    - Implement the algorithm extending `FAISS` C++; build evaluation framework; contributing 70% codebase
 
-  - *Explored AI-driven systems research*
-    - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
-    - Led case study in @barbarians-paper achieving 30% improvement over SOTA demonstrating automated research capabilities
-    - Co-developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS tasks
+  - *AI-driven systems research*
+    - Investigate automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
+    - Lead case study in @barbarians-paper demonstrating 30% improvement over SOTA
+    - Co-develop @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS tasks
 ]
 
 
@@ -153,8 +153,8 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-item[
   - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
-    - Cultivated research methodology and problem identification skills through analyzing 30+ papers and weekly research discussions
-    - Developed course project on multi-cloud orchestration achieving 45% cost reduction through intelligent data placement and spot recovery
+    - Built research methodology and problem-framing skills through 30+ paper reviews and weekly discussions
+    - Developed a multi-cloud orchestration project achieving 45% cost savings through data placement and spot recovery
 ]
 
 #resume-entry(
@@ -337,7 +337,7 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-item[
   - Organized 10+ tech talks with 500+ attendees, exploring Functional Programming to Rust ecosystem
-  - Lead 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment
+  - Led 100+ members across 6 departments, fostering a startup atmosphere and inclusive environment
 ]
 
 // TODO: think about the startup stuff.
@@ -417,7 +417,7 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-skill-item(
   "Coding",
-  (text(weight: 900)[C++], text(weight: 900)[Python], text(weight: 900)[CUDA], "Rust", "Typescript", "PyTorch"),
+  (text(weight: 900)[C++], text(weight: 900)[Python], text(weight: 900)[CUDA], "Rust", "TypeScript", "PyTorch"),
 )
 #resume-skill-item(
   "Technical",
