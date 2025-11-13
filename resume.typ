@@ -98,7 +98,8 @@
 
 = Research Interests
 
-My research interests lie in designing efficient systems for machine learning workloads, focusing on cloud resource orchestration, distributed training infrastructure, and storage-optimized serving. I am particularly interested in cross-layer optimizations and exploring how AI techniques can advance systems design methodologies.
+My research interests lie in designing efficient systems for machine learning workloads, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems. // TODO: longer.
+I am also interested in exploring how AI techniques can advance systems design methodologies.
 // TODO: maybe not serving?
 
 // = Education
@@ -127,19 +128,23 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-item[
   - *@skynomad-paper: Multi-Region Spot Instance Scheduling*
-    - Designed a multi-region spot scheduling system that addressed single-region availability bottlenecks for deadline-sensitive workloads via Unified Cost Model trading off cross-region opportunities vs. egress costs
-    - Achieved 50% cost reduction over SOTA, saved \$1,000+ per training job vs. AWS SageMaker in large-scale experiments
-    - Co-led project with PhD student: designed methodology and built a complete simulation framework
+    - Designed a multi-region spot scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region opportunities vs. egress costs
+    - Achieved 50% cost reduction over SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
+    - Leaded the project, designed the policy and built the simulation framework
+  // TODO: polish. longer
 
   - *@leann-paper: Storage-Efficient Compound AI Systems*
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
     - Achieved 97% storage reduction with \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
-    - Implemented the algorithm extending `FAISS` C++; built evaluation framework; contributed 70% codebase
+    - Built the system extending `FAISS` C++ (70\% codebase contribution); built evaluation framework
+  // two built. only keep evaluation
 
-  - *AI-driven systems research*
+  - *AI-driven Systems Research*
     - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
-    - Led case study in @barbarians-paper demonstrating 30% improvement over SOTA
-    - Co-developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS tasks
+    - Led case study in @barbarians-paper, which demonstrated 30% improvement over SOTA
+    // TODO:
+    - Co-developed @frontiercs-paper benchmark with problem specifications and evaluations for 40 open-ended problems
+  // maybe not scoring
 ]
 
 
@@ -153,8 +158,8 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-item[
   - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
+    - Developed a multi-cloud orchestration project that achieved 45% cost savings through data placement and spot usage
     - Built research methodology and problem-framing skills through 30+ paper reviews and weekly discussions
-    - Developed a multi-cloud orchestration project that achieved 45% cost savings through data placement and spot recovery
 ]
 
 #resume-entry(
@@ -171,6 +176,7 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #resume-item[
   - Member of Turing Honors Class, an elite CS program for top talented students
+  // top talented
   - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
 ]
 
@@ -192,7 +198,7 @@ My research interests lie in designing efficient systems for machine learning wo
 
 #metadata("skynomad-ref") <skynomad-paper>
 #resume-publication(
-  title: paper("SkyNomad: Cost-Effective Multi-Region Scheduling for Deadline-Sensitive Workloads on Spot Instances"),
+  title: paper("SkyNomad: Cost-Effective Multi-Region Scheduling for Offline Workloads on Spot Instances"),
   authors: [#format-authors("me*", "Tian Xia*", "et al.", "Scott Shenker", "Ion Stoica")],
   venue: "OSDI '26 (in submission)",
 )
@@ -280,6 +286,7 @@ My research interests lie in designing efficient systems for machine learning wo
 #resume-item[
   - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and widespread community adoption
   - Co-designed technical outreach strategy including blog posts and social media campaign, engaged volunteers for cross-platform testing and validation
+  // TODO: stats.
 ]
 
 #metadata("skypilot-project-ref") <skypilot-project>
@@ -336,7 +343,8 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Organized 10+ tech talks with 500+ attendees that explored Functional Programming to Rust ecosystem
+  - Organized 10+ tech talks with 5000+ attendees that explored Functional Programming to Rust ecosystem
+  // 500 each/sum?
   - Led 100+ members across 6 departments, fostered a startup atmosphere and inclusive environment
 ]
 
@@ -408,6 +416,7 @@ My research interests lie in designing efficient systems for machine learning wo
       fill: gray.darken(20%),
       weight: "light",
     )[(300 per year)]],
+  // TODO: 300 what?
   date: "December 2019",
   // organization: "China Computer Federation",
 )
