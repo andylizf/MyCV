@@ -96,11 +96,13 @@
   show-footer: false,
 )
 
+#set par(spacing: 1.22em)
+#set par(leading: 0.99em)
+
 = Research Interests
 
-My research interests lie in designing efficient systems for machine learning workloads, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems. // TODO: longer.
+My research interests lie in designing efficient systems for ML, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems addressing the growing resource demands of diverse AI applications.
 I am also interested in exploring how AI techniques can advance systems design methodologies.
-// TODO: maybe not serving?
 
 // = Education
 
@@ -123,28 +125,26 @@ I am also interested in exploring how AI techniques can advance systems design m
   title-link: "https://sky.cs.berkeley.edu/",
   location: "University of California, Berkeley",
   date: "July 2025 - December 2025",
-  description: [Research Intern, advised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Ion Stoica]]; worked with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Joseph Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Matei Zaharia]]],
+  description: [Research Intern, advised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Prof. Ion Stoica]]; \
+    #v(-0.7em)worked with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Prof. Joseph E. Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Prof. Matei Zaharia]]],
 )
 
 #resume-item[
-  - *@skynomad-paper: Multi-Region Spot Instance Scheduling*
+  #v(0.3em)
+  - *@skynomad-paper: Multi-Region Spot Instance Scheduling* (submmited to #strong("OSDI '26"))
     - Designed a multi-region spot scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region opportunities vs. egress costs
-    - Achieved 50% cost reduction over SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
-    - Leaded the project, designed the policy and built the simulation framework
-  // TODO: polish. longer
+    - Achieved 50% cost reduction over the SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
+    - Led project from research formulation to implementation, drove methodology design, and built simulation framework
 
-  - *@leann-paper: Storage-Efficient Compound AI Systems*
+  - *@leann-paper: Storage-Efficient Compound AI Systems* (submitted to #strong("MLSys '26"))
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
     - Achieved 97% storage reduction with \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
-    - Built the system extending `FAISS` C++ (70\% codebase contribution); built evaluation framework
-  // two built. only keep evaluation
+    - Built the system extending `FAISS` C++, contributing 70\% codebase; conducted comprehensive experimental evaluation
 
   - *AI-driven Systems Research*
     - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
-    - Led case study in @barbarians-paper, which demonstrated 30% improvement over SOTA
-    // TODO:
+    - Led case study in @barbarians-paper, which demonstrated 30% improvement over the SOTA
     - Co-developed @frontiercs-paper benchmark with problem specifications and evaluations for 40 open-ended problems
-  // maybe not scoring
 ]
 
 
@@ -216,14 +216,14 @@ I am also interested in exploring how AI techniques can advance systems design m
     "Matei Zaharia",
     "Joseph Gonzalez",
   )],
-  venue: "MLSys '26 (in submission)",
+  venue: "MLSys '26 (in submission); ArXiv: 2506.08276",
 )
 
 #metadata("barbarians-ref") <barbarians-paper>
 #resume-publication(
   title: paper("Barbarians at the Gate: How AI is Upending Systems Research", url: "https://arxiv.org/abs/2510.06189"),
   authors: [#format-authors("Audrey Cheng*", "Shu Liu*", "Melissa Pan*", "me", "Bowen Wang", "et al.", "Ion Stoica")],
-  venue: "arXiv",
+  venue: "arXiv: 2510.06189",
 )
 
 #metadata("frontiercs-ref") <frontiercs-paper>
@@ -258,7 +258,7 @@ I am also interested in exploring how AI techniques can advance systems design m
     "Scott Shenker",
     "Ion Stoica",
   )],
-  venue: "EuroSys 2026",
+  venue: "EuroSys 2026; ArXiv: 2505.24095v2",
 )
 
 // #label("checkpoint")
@@ -284,9 +284,8 @@ I am also interested in exploring how AI techniques can advance systems design m
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and widespread community adoption
-  - Co-designed technical outreach strategy including blog posts and social media campaign, engaged volunteers for cross-platform testing and validation
-  // TODO: stats.
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and 40k+ community downloads
+  - Drove technical outreach including blog posts social media campaign achieving 600k+ views
 ]
 
 #metadata("skypilot-project-ref") <skypilot-project>
@@ -300,17 +299,6 @@ I am also interested in exploring how AI techniques can advance systems design m
 #resume-item[
   - Top 10 contributor; created 70+ issues and merged 50+ pull requests; contributed 30,000+ lines of code changes
   - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode
-]
-
-#resume-entry(
-  title: "AI4Edu: Cheese Community",
-  location: gh_repo("SageSeekerSociety/cheese-backend"),
-  date: "September 2023 - October 2024",
-  description: "Knowledge Q&A and Academic Resource Sharing Platform",
-)
-
-#resume-item[
-  - Architected scalable full-stack platform that featured real-time collaboration and LLM-powered Q&A that served 1000+ DAU
 ]
 
 // #linebreak()
@@ -338,17 +326,26 @@ I am also interested in exploring how AI techniques can advance systems design m
 #resume-entry(
   title: "RUC Computer Association",
   location: "Renmin University of China",
-  date: "2023 - Present",
+  date: "2024.7 - 2025.7",
   description: "President",
 )
 
 #resume-item[
-  - Organized 10+ tech talks with 5000+ attendees that explored Functional Programming to Rust ecosystem
-  // 500 each/sum?
+  - Organized 10+ tech talks with 5000+ total attendees covering topics from Functional Programming to Rust ecosystem
   - Led 100+ members across 6 departments, fostered a startup atmosphere and inclusive environment
 ]
 
-// TODO: think about the startup stuff.
+#resume-entry(
+  title: "Cheese Tech",
+  location: gh_repo("SageSeekerSociety/cheese-backend"),
+  date: "September 2023 - October 2024",
+  description: "Co-founder",
+)
+
+#resume-item[
+  - Raised \$300K seed funding, grew to 1,000+ users across 3 partner institutions within first year
+  - Developed AI-powered research platform with inspiration tracking, progress management, and intelligent advising
+]
 
 = Honors and Awards
 
@@ -363,7 +360,7 @@ I am also interested in exploring how AI techniques can advance systems design m
       size: 9pt,
       fill: gray.darken(20%),
       weight: "light",
-    )[(\<100 recipients nationally)]],
+    )[(\<100 recipients #strong("nationally"))]],
   date: "August 2025",
   // description: "China Computer Federation",
 )
@@ -373,7 +370,7 @@ I am also interested in exploring how AI techniques can advance systems design m
       size: 9pt,
       fill: gray.darken(20%),
       weight: "light",
-    )[(15 out of 2000 per year)]],
+    )[(15 recipients out of 2000)]],
   date: "May 2025",
   // description: "Gaoling School of Artificial Intelligence",
 )
@@ -401,11 +398,11 @@ I am also interested in exploring how AI techniques can advance systems design m
   title: [#text(
       style: "italic",
       weight: "regular",
-    )[First-Class Scholarship for Social Work and Volunteer Service] #text(
+    )[First-Class Scholarship for Social Service] #text(
       size: 9pt,
       fill: gray.darken(20%),
       weight: "light",
-    )[(48 out of 35,000 per year)]],
+    )[(48 recipients out of #strong("35,000"))]],
   date: "September 2023",
   // organization: "Renmin University of China",
 )
@@ -415,8 +412,7 @@ I am also interested in exploring how AI techniques can advance systems design m
       size: 9pt,
       fill: gray.darken(20%),
       weight: "light",
-    )[(300 per year)]],
-  // TODO: 300 what?
+    )[(300 winners)]],
   date: "December 2019",
   // organization: "China Computer Federation",
 )
@@ -426,7 +422,19 @@ I am also interested in exploring how AI techniques can advance systems design m
 
 #resume-skill-item(
   "Coding",
-  (text(weight: 900)[C++], text(weight: 900)[Python], text(weight: 900)[CUDA], "Rust", "TypeScript", "PyTorch"),
+  (
+    text(weight: 900)[C++],
+    text(weight: 900)[Python],
+    text(weight: 900)[CUDA],
+    "Rust",
+    "TypeScript",
+    "PyTorch",
+    "Typst",
+    "Nix",
+    "SkyPilot",
+    "NeMo",
+    "verl",
+  ),
 )
 #resume-skill-item(
   "Technical",
@@ -438,16 +446,16 @@ I am also interested in exploring how AI techniques can advance systems design m
     "Open-Source Project Development",
   ),
 )
-#resume-skill-item(
-  "Laboratory",
-  ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring"),
-)
+// #resume-skill-item(
+//   "Laboratory",
+//   ("Research Prototyping", "Research Group Leadership", "Project Timeline Management", "Peer Research Mentoring"),
+// )
 #resume-skill-item(
   "Languages",
-  ("English", "Chinese (native)"),
+  ("English", "Chinese (native)", "French"),
 )
 
-#resume-skill-item(
-  "Soft Skills",
-  ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation"),
-)
+// #resume-skill-item(
+//   "Soft Skills",
+//   ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation"),
+// )
