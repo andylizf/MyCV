@@ -101,8 +101,6 @@
 
 = Research Interests
 
-// maybe keywords? or at least stressing some words
-
 My research interests lie in *designing efficient systems for ML*, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems addressing the growing resource demands of diverse AI applications.
 I am also interested in exploring how AI techniques can advance systems design methodologies.
 
@@ -136,7 +134,7 @@ I am also interested in exploring how AI techniques can advance systems design m
   - *@skynomad-paper: Multi-Region Spot Instance Scheduling* (submmited to #strong("OSDI '26"))
     - Designed a multi-region spot instance scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region availability and pricing vs. migration costs
     - Achieved 50% cost reduction over the SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
-    - Led project from research formulation to implementation, drove methodology design, and built simulation framework
+    - Led project from research formulation to production, drove methodology design, and built simulation framework
 
   - *@leann-paper: Storage-Efficient Compound AI Systems* (submitted to #strong("MLSys '26"))
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
@@ -161,8 +159,9 @@ I am also interested in exploring how AI techniques can advance systems design m
 #resume-item[
   // overlapped.
   - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
-    - Developed a multi-cloud orchestration project that achieved 45% cost savings through data placement and spot usage
-    - Built research methodology and problem-framing skills through 30+ paper reviews and weekly discussions
+    - Optimized complex DAG workload execution through intelligent data placement and cross-cloud task scheduling
+    - Achieved 45% cost reduction; select optimizations merged into @skypilot-project
+  // - Learnt research methodology and problem-framing skills through 30+ paper reviews and weekly discussions
 ]
 
 #resume-entry(
@@ -174,13 +173,12 @@ I am also interested in exploring how AI techniques can advance systems design m
     )[(Ranked #text(weight: 900)[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
-  description: "Bachelor's in Computer Science",
+  description: [Bachelor's in Computer Science, #strong("Turing Honors Class")],
 )
 
 #resume-item[
-  - Member of Turing Honors Class, an elite CS program for top students
+  - GPA: 3.8/4.0 (Top 5%)
   // top talented
-  - GPA: 3.8/4.0 (Top 5%, Ranked #text(weight: 900)[5/136])
 ]
 
 
