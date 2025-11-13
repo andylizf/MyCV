@@ -122,21 +122,20 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - *Designed @skynomad-paper for multi-region Spot Instance scheduling.*
-    - Addressed fundamental single-region availability bottleneck with Unified Cost Model trading off cross-region opportunities vs egress costs
-    - Achieved 50% cost reduction over SOTA, \$1,000 savings vs AWS SageMaker
-    - Co-led project with PhD student, driving methodology design and simulation framework implementation
+  - *@skynomad-paper: Multi-Region Spot Instance Scheduling*
+    - Addresses single-region availability bottleneck for deadline-sensitive workloads with Unified Cost Model trading off cross-region opportunities vs egress costs
+    - Achieves 50% cost reduction over state-of-the-art; saves \$1,000+ per training job vs AWS SageMaker
+    - Co-led project with PhD student: drove methodology design and built complete simulation framework
 
-  - *Developed @leann-paper for storage-efficient compound AI systems.*
-    - Tackled storage bottleneck in RAG pipelines where vector index size dominates infrastructure costs
-    - Co-designed two-level recompute algorithm extending `FAISS` C++; built evaluation framework achieving 97% storage reduction
-    - Led research-to-production translation contributing 70% of codebase; reached #link(<leann-project>)[4,000+ stars on GitHub]
+  - *@leann-paper: Storage-Efficient Compound AI Systems*
+    - Tackles storage bottleneck in RAG pipelines where vector indices incur 10-100× overhead with two-level recompute algorithm
+    - Achieves 97% storage reduction with \<5% latency impact; reached #link(<leann-project>)[4,000+ GitHub stars]
+    - Co-designed algorithm extending `FAISS` C++; built evaluation framework; led open-source implementation contributing 70% codebase
 
   - *Explored AI-driven systems research.*
-    - Designed evolution pipelines for OpenEvolve/GEPA demonstrating automated systems research capabilities
-    - Led primary case study in @barbarians-paper achieving 30% improvement over state-of-the-art baseline via evolutionary search
-    - Co-developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS research tasks
-    // co-developed.
+    - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
+    - Led case study in @barbarians-paper achieving 30% improvement over SOTA demonstrating automated research capabilities
+    - Co-developed @frontiercs-paper evaluation framework with problem specifications and scoring methodology for 40 CS tasks
 ]
 
 
@@ -149,9 +148,9 @@ My research interests lie in designing efficient systems for machine learning wo
 )
 
 #resume-item[
-  - Cultivated research methodology and problem identification skills in #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule")[CS294-162 Machine Learning Systems]] graduate seminar through paper analysis, critical evaluation, and research discussions.
-  -   // - Designed and implemented multi-cloud AI workflow orchestration system with data placement optimization, parallel execution support, and dynamic spot instance recovery built upon SkyPilot.
-  // - Achieved 45% reduction in total cost while maintaining performance through smart data placement, creating first comprehensive solution for multi-cloud AI workflows with simplified management.
+  - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
+    - Cultivated research methodology and problem identification skills through analyzing 30+ papers and weekly research discussions
+    - Developed course project on multi-cloud orchestration achieving 45% cost reduction through intelligent data placement and spot recovery
 ]
 
 #resume-entry(
