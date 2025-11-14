@@ -90,7 +90,7 @@
       //   "Empowering Tomorrow's AI",
     ),
   ),
-  // font: "New Computer Modern", // Or Calibri
+  font: "New Computer Modern", // Or Calibri
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
@@ -105,7 +105,7 @@
 
 
 My research interests lie in *designing efficient systems for ML*, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems addressing the growing resource demands of diverse AI applications.
-I am also interested in exploring how AI techniques can advance systems design methodologies.
+I am also interested exploring in how AI techniques can advance systems design.
 
 // = Education
 
@@ -147,9 +147,9 @@ I am also interested in exploring how AI techniques can advance systems design m
 
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
 
-    - Achieved 97% storage reduction with \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
+    - Achieved 97% storage reduction, \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
 
-    - Built the system extending `FAISS` C++, contributing 70\% codebase; conducted comprehensive experimental evaluation
+    - Built the system extending `FAISS` C++, contributing 70\% codebase; conducted experimental evaluation
 
     #v(0.4em)
   - *AI-driven Systems Research*
@@ -302,7 +302,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and 40k+ community downloads
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and 40k+ downloads
 
   - Drove technical outreach including blog posts social media campaign achieving 600k+ views
 ]
