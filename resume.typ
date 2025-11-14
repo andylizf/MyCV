@@ -90,7 +90,7 @@
       //   "Empowering Tomorrow's AI",
     ),
   ),
-  font: "Helvetica Neue", // Or Calibri
+  // font: "New Computer Modern", // Or Calibri
   date: datetime.today().display(),
   language: "en",
   colored-headers: true,
