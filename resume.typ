@@ -1,4 +1,5 @@
-#import "@local/modern-cv:0.7.0": *
+// #import "@local/modern-cv:0.7.0": *
+#import "modern-cv/lib.typ": *
 
 #let myname(showstar: false) = {
   if showstar {
@@ -96,10 +97,12 @@
   show-footer: false,
 )
 
-#set par(spacing: 1.22em)
-#set par(leading: 0.99em)
+#set par(spacing: 1.1em)
+// #set par(leading: 0.99em)
+#show list: set par(spacing: 0.85em, leading: 0.6em)
 
 = Research Interests
+
 
 My research interests lie in *designing efficient systems for ML*, focusing on cloud resource orchestration, distributed training infrastructure, and compound AI systems addressing the growing resource demands of diverse AI applications.
 I am also interested in exploring how AI techniques can advance systems design methodologies.
@@ -132,18 +135,29 @@ I am also interested in exploring how AI techniques can advance systems design m
 #resume-item[
   #v(0.3em)
   - *@skynomad-paper: Multi-Region Spot Instance Scheduling* (submmited to #strong("OSDI '26"))
+
     - Designed a multi-region spot instance scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region availability and pricing vs. migration costs
+
     - Achieved 50% cost reduction over the SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
+
     - Led project from research formulation to production, drove methodology design, and built simulation framework
 
+    #v(0.4em)
   - *@leann-paper: Storage-Efficient Compound AI Systems* (submitted to #strong("MLSys '26"))
+
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
+
     - Achieved 97% storage reduction with \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
+
     - Built the system extending `FAISS` C++, contributing 70\% codebase; conducted comprehensive experimental evaluation
 
+    #v(0.4em)
   - *AI-driven Systems Research*
-    - Investigated automated systems optimization through evolutionary algorithms and LLM-guided design space exploration
+
+    - Investigated systems optimization through evolutionary algorithms and LLM-guided design space exploration
+
     - Led case study in @barbarians-paper paper, which demonstrated 30% improvement over the SOTA
+
     - Co-developed @frontiercs-paper benchmark with problem specifications and evaluations for 40 open-ended problems
 ]
 
@@ -158,8 +172,11 @@ I am also interested in exploring how AI techniques can advance systems design m
 
 #resume-item[
   // overlapped.
+  #v(0.3em)
   - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
+
     - Optimized complex DAG workload execution through intelligent data placement and cross-cloud task scheduling
+
     - Achieved 45% cost reduction; select optimizations merged into @skypilot-project
   // - Learnt research methodology and problem-framing skills through 30+ paper reviews and weekly discussions
 ]
@@ -286,6 +303,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 
 #resume-item[
   - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and 40k+ community downloads
+
   - Drove technical outreach including blog posts social media campaign achieving 600k+ views
 ]
 
@@ -299,6 +317,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 
 #resume-item[
   - Top 10 contributor; created 70+ issues and merged 50+ pull requests; contributed 30,000+ lines of code changes
+
   - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode
 ]
 
@@ -333,7 +352,8 @@ I am also interested in exploring how AI techniques can advance systems design m
 )
 
 #resume-item[
-  - Organized 10+ tech talks with 5000+ total attendees covering topics from Functional Programming to Rust ecosystem
+  - Organized 10+ tech talks, 5000+ total attendees, covering topics from Functional Programming to Rust ecosystem
+
   - Led 100+ members across 6 departments, fostered a startup atmosphere and inclusive environment
 ]
 
@@ -346,6 +366,7 @@ I am also interested in exploring how AI techniques can advance systems design m
 
 #resume-item[
   - Raised \$300K seed funding, grew to 1,000+ users across 3 partner institutions within first year
+
   - Developed AI-powered research platform with inspiration tracking, progress management, and intelligent advising
 ]
 
