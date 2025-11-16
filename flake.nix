@@ -31,11 +31,6 @@
               ${pkgs.git}/bin/git submodule update --init --recursive
             fi
 
-            echo "Building local package..."
-            rm -rf ./.package-build
-            mkdir -p ./.package-build
-            cp -r modern-cv/* ./.package-build/
-
             # OS-aware Typst local package dir
             case "$(uname -s)" in
               Darwin)
@@ -50,8 +45,8 @@
             esac
             mkdir -p "$(dirname "$SYSTEM_PKG_DIR")"
             rm -rf "$SYSTEM_PKG_DIR" 2>/dev/null || true
-            ln -sf "$PWD/.package-build" "$SYSTEM_PKG_DIR"
-            echo "Package installed at: $SYSTEM_PKG_DIR"
+            ln -s "$PWD/modern-cv" "$SYSTEM_PKG_DIR"
+            echo "Package linked to repo at: $SYSTEM_PKG_DIR"
 
             # Fonts dir inside repo to keep sandboxed
             FONTS_DIR="$PWD/.fonts"
