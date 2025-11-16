@@ -138,7 +138,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 
     - Designed a multi-region spot instance scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region availability and pricing vs. migration costs
 
-    - Achieved 50% cost reduction over the SOTA, saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
+    - Achieved >50% cost reduction over previous SOTA (NSDI '24 best paper), saved \$1,000+ from a \$2,200 training job vs. AWS SageMaker
 
     - Led project from research formulation to production, drove methodology design, and built simulation framework
 
@@ -149,7 +149,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 
     - Achieved 97% storage reduction, \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
 
-    - Built the system extending `FAISS` C++, contributing 70\% codebase; conducted experimental evaluation
+    - Built the system extending `FAISS` C++, contributing 70\% codebase; drove evaluation efforts
 
     #v(0.4em)
   - *AI-driven Systems Research*
@@ -240,7 +240,16 @@ I am also interested exploring in how AI techniques can advance systems design.
 #metadata("barbarians-ref") <barbarians-paper>
 #resume-publication(
   title: paper("Barbarians at the Gate: How AI is Upending Systems Research", url: "https://arxiv.org/abs/2510.06189"),
-  authors: [#format-authors("Audrey Cheng*", "Shu Liu*", "Melissa Pan*", "me", "Bowen Wang", "et al.", "Ion Stoica")],
+  authors: [#format-authors(
+    "Audrey Cheng*",
+    "Shu Liu*",
+    "Melissa Pan*",
+    "me",
+    "Bowen Wang",
+    "et al.",
+    "Matei Zaharia",
+    "Ion Stoica",
+  )],
   venue: "arXiv: 2510.06189",
 )
 
@@ -302,7 +311,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 3 active external contributors and 40k+ downloads
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 20 active external contributors and 40k+ downloads
 
   - Drove technical outreach including blog posts social media campaign achieving 600k+ views
 ]
