@@ -30,25 +30,82 @@
   set box(height: 11pt)
 
   align(right + horizon)[
-    #box(baseline: 15%)[#fa-icon("github", fill: color-darkgray)] #underline(
+    #box(baseline: 15%)[#fa-icon("github", fill: color-darkgray)]
+    #underline(
       evade: false,
       stroke: 0.5pt,
       offset: 0.2em,
-    )[#link("https://github.com/" + repo_full, _label)]#if stars != none {
+      extent: -1pt,
+    )[
+      #link("https://github.com/" + repo_full)[
+        #set text(fill: default-accent-color)
+        #_label
+      ]
+    ]#if stars != none {
       h(4pt)
-      box(baseline: 15%)[#text(size: 8.5pt, fill: gray.darken(20%))[(#h(1pt)#stars#h(2pt)#text(size: 12pt)[★]#h(1pt))]]
+      box(baseline: 15%)[
+        #set text(size: 8.5pt, fill: gray.darken(20%))
+        #h(1pt)
+        #stars
+        #h(1pt)
+        #fa-icon("star", fill: rgb("#f1c40f"))
+        #h(1pt)
+      ]
     }
   ]
 }
 
+#show link: it => it
+
 #let paper(title, url: none) = {
-  if url == none {
-    // No link: render plain title without underline
-    title
-  } else {
-    // With link: underline the clickable title
-    underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(url)[#title]]
-  }
+  // Always render plain title; actual PDF links are shown separately as [pdf].
+  title
+}
+
+#let prominent-link(label, url) = {
+  // Prominent link: blue label with a slightly shortened underline to avoid overshoot.
+  link(
+    url,
+    underline(
+      evade: false,
+      stroke: 0.5pt,
+      offset: 0.2em,
+      extent: -1pt,
+    )[
+      #set text(fill: default-accent-color)
+      #label
+    ],
+  )
+}
+
+#let resume-publication(
+  title: none,
+  authors: none,
+  venue: none,
+  description: none,
+  pdf-url: none,
+) = {
+  block(above: 1em, below: 0.65em, breakable: false)[
+    #pad[
+      #justified-header(title, "")
+
+      #set text(
+        size: 10pt,
+        weight: "light",
+        fill: color-darknight,
+      )
+      #block(above: 0.5em, below: 0.5em)[
+        #authors
+      ]
+
+      #if venue != none [
+        #secondary-justified-header([#venue#if pdf-url != none [; #prominent-link("[PDF]", pdf-url)]], "")]
+
+      #if description != none [
+        #resume-item[#description]
+      ]
+    ]
+  ]
 }
 
 #show ref.where(target: label("leann-paper")): it => {
@@ -121,7 +178,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 //   - Leads KEEER Club, developing tech platforms for school charity events and volunteer activities
 // ]
 
-= Experience
+= Research Experience
 
 #resume-entry(
   title: underline()[Sky Computing Lab],
@@ -134,7 +191,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 
 #resume-item[
   #v(0.3em)
-  - *@skynomad-paper: Multi-Region Spot Instance Scheduling* (submmited to #strong("OSDI '26"))
+  - *@skynomad-paper: Multi-Region Spot Instance Scheduling* (submitted to #strong("OSDI '26"))
 
     - Designed a multi-region spot instance scheduling system, addressing single-region availability bottlenecks for offline workloads, via Unified Cost Model trading off cross-region availability and pricing vs. migration costs
 
@@ -160,6 +217,8 @@ I am also interested exploring in how AI techniques can advance systems design.
 
     - Co-developed @frontiercs-paper benchmark with problem specifications and evaluations for 40 open-ended problems
 ]
+
+= Education
 
 
 #resume-entry(
@@ -216,18 +275,28 @@ I am also interested exploring in how AI techniques can advance systems design.
 
 #metadata("skynomad-ref") <skynomad-paper>
 #resume-publication(
-  title: paper("SkyNomad: Cost-Effective Multi-Region Scheduling for Offline Workloads on Spot Instances"),
-  authors: [#format-authors("me*", "Tian Xia*", "et al.", "Scott Shenker", "Ion Stoica")],
+  title: paper("SkyNomad: On using Spot Instances across Regions to Minimize Batch Job Cost"),
+  authors: [#format-authors(
+    "me*",
+    "Tian Xia*",
+    "Zihan Zhou",
+    "Ziming Mao",
+    "Yi Xu",
+    "Yifan Qiao",
+    "Scott Shenker",
+    "Ion Stoica",
+  )],
   venue: "OSDI '26 (in submission)",
 )
 
 #metadata("leann-ref") <leann-paper>
 #resume-publication(
-  title: paper("LEANN: A Low-Storage Overhead Vector Index", url: "https://arxiv.org/abs/2506.08276"),
+  title: paper("LEANN: A Low-Storage Overhead Vector Index"),
   authors: [#format-authors(
     "Yichuan Wang",
     "me",
     "Shu Liu",
+    "Yongji Wu",
     "et al.",
     "Ion Stoica",
     "Sewon Min",
@@ -235,22 +304,25 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Joseph Gonzalez",
   )],
   venue: "MLSys '26 (in submission)",
+  pdf-url: "https://arxiv.org/abs/2506.08276",
 )
 
 #metadata("barbarians-ref") <barbarians-paper>
 #resume-publication(
-  title: paper("Barbarians at the Gate: How AI is Upending Systems Research", url: "https://arxiv.org/abs/2510.06189"),
+  title: paper("Barbarians at the Gate: How AI is Upending Systems Research"),
   authors: [#format-authors(
     "Audrey Cheng*",
     "Shu Liu*",
     "Melissa Pan*",
     "me",
     "Bowen Wang",
+    "Alex Krentsel",
     "et al.",
     "Matei Zaharia",
     "Ion Stoica",
   )],
   venue: "arXiv: 2510.06189",
+  pdf-url: "https://arxiv.org/abs/2510.06189",
 )
 
 #metadata("frontiercs-ref") <frontiercs-paper>
@@ -271,10 +343,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 )
 
 #resume-publication(
-  title: paper(
-    "SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference",
-    url: "https://arxiv.org/abs/2505.24095v2",
-  ),
+  title: paper("SkyWalker: A Locality-Aware Cross-Region Load Balancer for LLM Inference"),
   authors: [#format-authors(
     "Tian Xia",
     "Ziming Mao",
@@ -286,6 +355,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Ion Stoica",
   )],
   venue: "EuroSys 2026",
+  pdf-url: "https://arxiv.org/abs/2505.24095v2",
 )
 
 // #label("checkpoint")
@@ -305,7 +375,8 @@ I am also interested exploring in how AI techniques can advance systems design.
 #metadata("leann-project-ref") <leann-project>
 #resume-entry(
   title: "LEANN: the Smallest Vector Index in the World",
-  location: gh_repo("yichuan-w/LEANN", stars: "4.1k", label: "LEANN"),
+  title-link: "https://github.com/yichuan-w/LEANN",
+  location: gh_repo("yichuan-w/LEANN", stars: "4.5k", label: "LEANN"),
   date: "September 2024 - Present",
   description: "Enjoy 97% storage savings for RAG application on your personal device",
 )
@@ -319,7 +390,8 @@ I am also interested exploring in how AI techniques can advance systems design.
 #metadata("skypilot-project-ref") <skypilot-project>
 #resume-entry(
   title: "SkyPilot: Run AI on Any Infra",
-  location: gh_repo("skypilot-org/skypilot", stars: "8.9k", label: "SkyPilot"),
+  title-link: "https://github.com/skypilot-org/skypilot",
+  location: gh_repo("skypilot-org/skypilot", stars: "9k", label: "SkyPilot"),
   date: "September 2024 - Present",
   description: "Framework for running ML/AI workloads across any cloud infrastructure",
 )
@@ -327,7 +399,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-item[
   - Top 10 contributor; created 70+ issues and merged 50+ pull requests; contributed 30,000+ lines of code changes
 
-  - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode
+  - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode, IP Copilot and Liner
 ]
 
 // #linebreak()
@@ -402,7 +474,7 @@ I am also interested exploring in how AI techniques can advance systems design.
       size: 9pt,
       fill: gray.darken(20%),
       weight: "light",
-    )[(15 recipients out of 2000)]],
+    )[(15 recipients out of 2,000)]],
   date: "May 2025",
   // description: "Gaoling School of Artificial Intelligence",
 )
@@ -456,8 +528,8 @@ I am also interested exploring in how AI techniques can advance systems design.
   "Coding",
   (
     text(weight: 900)[C++],
-    text(weight: 900)[Python],
     text(weight: 900)[CUDA],
+    text(weight: 900)[Python],
     "Rust",
     "TypeScript",
   ),
@@ -467,11 +539,12 @@ I am also interested exploring in how AI techniques can advance systems design.
   (
     text(weight: 900)[PyTorch],
     text(weight: 900)[SkyPilot],
-    "NeMo",
     "Ray",
     "Kubernetes",
     "verl",
+    "NeMo",
     "Nix",
+    "Fish",
     "Typst",
   ),
 )
@@ -493,6 +566,10 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-skill-item(
   "Languages",
   ("English", "Chinese (native)", "French"),
+)
+#resume-skill-item(
+  "Hobbies",
+  ("Texas Hold'em", "Badminton", "Chess", "Cooking"),
 )
 
 // #resume-skill-item(
