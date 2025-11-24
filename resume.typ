@@ -31,31 +31,26 @@
 
   align(right + horizon)[
     #box(baseline: 15%)[#fa-icon("github", fill: color-darkgray)]
-    #underline(
-      evade: false,
-      stroke: 0.5pt,
-      offset: 0.2em,
-      extent: -1pt,
-    )[
-      #link("https://github.com/" + repo_full)[
-        #set text(fill: default-accent-color)
-        #_label
-      ]
+    #link("https://github.com/" + repo_full)[
+      #underline(
+        evade: false,
+        stroke: 0.5pt,
+        offset: 0.2em,
+        extent: -1pt,
+      )[#text(fill: default-accent-color)[#_label]]
     ]#if stars != none {
-      h(4pt)
+      h(3pt)
       box(baseline: 15%)[
-        #set text(size: 8.5pt, fill: gray.darken(20%))
-        #h(1pt)
-        #stars
-        #h(1pt)
-        #fa-icon("star", fill: rgb("#f1c40f"))
-        #h(1pt)
+        #set text(size: 11.5pt, fill: gray.darken(20%))
+        #text(weight: "bold")[#stars]
+        #h(-2pt)
+        #text(size: 10pt)[#fa-icon("star", solid: true, fill: rgb("#f1c40f"))]
       ]
     }
   ]
 }
 
-#show link: it => it
+// #show link: it => it
 
 #let paper(title, url: none) = {
   // Always render plain title; actual PDF links are shown separately as [pdf].
@@ -63,7 +58,7 @@
 }
 
 #let prominent-link(label, url) = {
-  // Prominent link: blue label with a slightly shortened underline to avoid overshoot.
+  // Fix: Apply text color directly without set rule
   link(
     url,
     underline(
@@ -71,10 +66,7 @@
       stroke: 0.5pt,
       offset: 0.2em,
       extent: -1pt,
-    )[
-      #set text(fill: default-accent-color)
-      #label
-    ],
+    )[#text(fill: default-accent-color)[#label]],
   )
 }
 
@@ -109,27 +101,27 @@
 }
 
 #show ref.where(target: label("leann-paper")): it => {
-  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[LEANN]]
+  link(it.target)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[LEANN]]
 }
 
 #show ref.where(target: label("skynomad-paper")): it => {
-  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[SkyNomad]]
+  link(it.target)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[SkyNomad]]
 }
 
 #show ref.where(target: label("barbarians-paper")): it => {
-  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[Barbarians at the Gate]]
+  link(it.target)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Barbarians at the Gate]]
 }
 
 #show ref.where(target: label("frontiercs-paper")): it => {
-  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[FrontierCS]]
+  link(it.target)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[FrontierCS]]
 }
 
 #show ref.where(target: label("leann-project")): it => {
-  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[LEANN GitHub]]
+  link(it.target)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[LEANN GitHub]]
 }
 
 #show ref.where(target: label("skypilot-project")): it => {
-  underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(it.target)[SkyPilot]]
+  link(it.target)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[SkyPilot]]
 }
 
 #show: resume.with(
@@ -185,8 +177,8 @@ I am also interested exploring in how AI techniques can advance systems design.
   title-link: "https://sky.cs.berkeley.edu/",
   location: "University of California, Berkeley",
   date: "July 2025 - December 2025",
-  description: [Research Intern, advised by #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~istoica/")[Prof. Ion Stoica]]; \
-    #v(-0.7em)worked with #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~jegonzal/")[Prof. Joseph E. Gonzalez]], #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://people.eecs.berkeley.edu/~matei/")[Prof. Matei Zaharia]]],
+  description: [Research Intern, advised by #link("https://people.eecs.berkeley.edu/~istoica/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Prof. Ion Stoica]]; \
+    #v(-0.7em)worked with #link("https://people.eecs.berkeley.edu/~jegonzal/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Prof. Joseph E. Gonzalez]], #link("https://people.eecs.berkeley.edu/~matei/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Prof. Matei Zaharia]]],
 )
 
 #resume-item[
@@ -204,7 +196,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
 
-    - Achieved 97% storage reduction, \<5% latency impact; led open-source implementation to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(<leann-project>)[4,000+ GitHub stars]]
+    - Achieved 97% storage reduction, \<5% latency impact; led open-source implementation to #link(<leann-project>)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[4,000+ GitHub stars]]
 
     - Built the system extending `FAISS` C++, contributing 70\% codebase; drove evaluation efforts
 
@@ -232,7 +224,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-item[
   // overlapped.
   #v(0.3em)
-  - *#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[CS294-162 Machine Learning Systems]] graduate seminar*
+  - *#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[CS294-162 Machine Learning Systems]] graduate seminar*
 
     - Optimized complex DAG workload execution through intelligent data placement and cross-cloud task scheduling
 
@@ -241,12 +233,12 @@ I am also interested exploring in how AI techniques can advance systems design.
 ]
 
 #resume-entry(
-  title: [#underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link(
+  title: [#link(
       "https://www.ruc.edu.cn/",
-    )[Renmin University of China]] #h(6pt) #text(
+    )[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Renmin University of China]] #h(6pt) #text(
       size: 8.5pt,
       fill: gray.darken(20%),
-    )[(Ranked #text(weight: 900)[23rd] globally on #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[CSRankings 2025]])]],
+    )[(Ranked #text(weight: 900)[23rd] globally on #link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[CSRankings 2025]])]],
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
   description: [Bachelor's in Computer Science, #strong("Turing Honors Class")],
@@ -382,7 +374,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://github.com/yichuan-w/LEANN")[4,000+ GitHub stars]] with 20 active external contributors and 40k+ downloads
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #link("https://github.com/yichuan-w/LEANN")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[4,000+ GitHub stars]] with 20 active external contributors and 40k+ downloads
 
   - Drove technical outreach including blog posts social media campaign achieving 600k+ views
 ]
@@ -391,7 +383,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-entry(
   title: "SkyPilot: Run AI on Any Infra",
   title-link: "https://github.com/skypilot-org/skypilot",
-  location: gh_repo("skypilot-org/skypilot", stars: "9k", label: "SkyPilot"),
+  location: gh_repo("skypilot-org/skypilot", stars: "9.0k", label: "SkyPilot"),
   date: "September 2024 - Present",
   description: "Framework for running ML/AI workloads across any cloud infrastructure",
 )
@@ -399,7 +391,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-item[
   - Top 10 contributor; created 70+ issues and merged 50+ pull requests; contributed 30,000+ lines of code changes
 
-  - Implemented #underline(evade: false, stroke: 0.5pt, offset: 0.2em)[#link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode, IP Copilot and Liner
+  - Implemented #link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode, IP Copilot and Liner
 ]
 
 // #linebreak()
