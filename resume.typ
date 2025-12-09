@@ -76,6 +76,7 @@
   venue: none,
   description: none,
   pdf-url: none,
+  website-url: none,
 ) = {
   block(above: 1em, below: 0.65em, breakable: false)[
     #pad[
@@ -91,7 +92,7 @@
       ]
 
       #if venue != none [
-        #secondary-justified-header([#venue#if pdf-url != none [; #prominent-link("[PDF]", pdf-url)]], "")]
+        #secondary-justified-header([#venue#if pdf-url != none [; #prominent-link("[PDF]", pdf-url)]#if website-url != none [; #prominent-link("[Website]", website-url)]], "")]
 
       #if description != none [
         #resume-item[#description]
@@ -132,6 +133,7 @@
     phone: "(+1) 510-292-1508",
     github: "andylizf",
     linkedin: "andylizf",
+    website: "https://andylizf.github.io",
     positions: (
       //   "Beijing, China",
       //   "AI Systems Researcher",
@@ -313,7 +315,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Matei Zaharia",
     "Ion Stoica",
   )],
-  venue: "arXiv: 2510.06189",
+  venue: "OSDI '26 (in submission)",
   pdf-url: "https://arxiv.org/abs/2510.06189",
 )
 
@@ -332,6 +334,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Alvin Cheung",
   )],
   venue: "arXiv",
+  website-url: "https://frontier-cs.org/",
 )
 
 #resume-publication(
