@@ -1,5 +1,42 @@
+// Resume for CMU (all programs) - with references page
 // #import "@local/modern-cv:0.7.0": *
 #import "modern-cv/lib.typ": *
+
+// Reference system: [1], [2], etc. that link to the references page
+#let references = (
+  (key: "skylab", desc: "Sky Computing Lab", url: "https://sky.cs.berkeley.edu/"),
+  (key: "stoica", desc: "Prof. Ion Stoica's Homepage", url: "https://people.eecs.berkeley.edu/~istoica/"),
+  (key: "gonzalez", desc: "Prof. Joseph E. Gonzalez's Homepage", url: "https://people.eecs.berkeley.edu/~jegonzal/"),
+  (key: "zaharia", desc: "Prof. Matei Zaharia's Homepage", url: "https://people.eecs.berkeley.edu/~matei/"),
+  (key: "cs294", desc: "CS294-162 Machine Learning Systems Seminar", url: "https://ucbsky.github.io/aisys-fa2024/schedule/"),
+  (key: "berkeley", desc: "University of California, Berkeley", url: "https://www.berkeley.edu"),
+  (key: "ruc", desc: "Renmin University of China", url: "https://www.ruc.edu.cn/"),
+  (key: "csrankings", desc: "CSRankings 2025", url: "https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world"),
+  (key: "leann-arxiv", desc: "LEANN: A Low-Storage Overhead Vector Index (arXiv)", url: "https://arxiv.org/abs/2506.08276"),
+  (key: "barbarians-arxiv", desc: "Barbarians at the Gate (arXiv)", url: "https://arxiv.org/abs/2510.06189"),
+  (key: "skywalker-arxiv", desc: "SkyWalker (arXiv)", url: "https://arxiv.org/abs/2505.24095v2"),
+  (key: "frontiercs", desc: "FrontierCS Website", url: "https://frontier-cs.org/"),
+  (key: "leann-github", desc: "LEANN GitHub Repository", url: "https://github.com/yichuan-w/LEANN"),
+  (key: "skypilot-github", desc: "SkyPilot GitHub Repository", url: "https://github.com/skypilot-org/skypilot"),
+  (key: "skyserve-ha", desc: "SkyServe High Availability Documentation", url: "https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability"),
+)
+
+#let ref-cite(key) = {
+  let idx = references.position(r => r.key == key)
+  link(label("ref-" + key))[\[#(idx + 1)\]]
+}
+
+#let references-page() = {
+  pagebreak()
+  align(center)[
+    #text(size: 14pt, weight: "bold")[References]
+  ]
+  v(1em)
+  for (i, ref) in references.enumerate() {
+    [\[#(i + 1)\] #ref.desc \ #ref.url #label("ref-" + ref.key)]
+    v(0.6em)
+  }
+}
 
 #let myname(showstar: false) = {
   if showstar {
@@ -24,21 +61,16 @@
   formatted.join(", ")
 }
 
-#let gh_repo(repo_full, stars: none, label: none) = {
-  // GitHub icon + repo name with optional stars count
+#let gh_repo(repo_full, stars: none, label: none, ref-key: none) = {
+  // GitHub icon + repo name with optional stars count and reference
   let _label = if label == none { str(repo_full).split("/").last() } else { label }
   set box(height: 11pt)
 
   align(right + horizon)[
     #box(baseline: 15%)[#fa-icon("github", fill: color-darkgray)]
-    #link("https://github.com/" + repo_full)[
-      #underline(
-        evade: false,
-        stroke: 0.5pt,
-        offset: 0.2em,
-        extent: -1pt,
-      )[#text(fill: default-accent-color)[#_label]]
-    ]#if stars != none {
+    #text(fill: default-accent-color)[#_label]
+    #if ref-key != none { ref-cite(ref-key) }
+    #if stars != none {
       h(3pt)
       box(baseline: 15%)[
         #set text(size: 11.5pt, fill: gray.darken(20%))
@@ -70,6 +102,11 @@
   )
 }
 
+// For CMU LTI: prominent link with reference citation
+#let prominent-ref(label, ref-key) = {
+  text(fill: default-accent-color)[#label] + ref-cite(ref-key)
+}
+
 #let resume-publication(
   title: none,
   authors: none,
@@ -77,6 +114,8 @@
   description: none,
   pdf-url: none,
   website-url: none,
+  pdf-ref: none,
+  website-ref: none,
 ) = {
   block(above: 1em, below: 0.65em, breakable: false)[
     #pad[
@@ -92,12 +131,7 @@
       ]
 
       #if venue != none [
-        #secondary-justified-header(
-          [#venue#if pdf-url != none [; #prominent-link("[PDF]", pdf-url)]#if (
-              website-url != none
-            ) [; #prominent-link("[Website]", website-url)]],
-          "",
-        )]
+        #secondary-justified-header([#venue#if pdf-ref != none [; #prominent-ref("[PDF]", pdf-ref)]#if website-ref != none [; #prominent-ref("[Website]", website-ref)]], "")]
 
       #if description != none [
         #resume-item[#description]
@@ -180,12 +214,11 @@ I am also interested exploring in how AI techniques can advance systems design.
 = Research Experience
 
 #resume-entry(
-  title: underline()[Sky Computing Lab],
-  title-link: "https://sky.cs.berkeley.edu/",
+  title: [Sky Computing Lab #ref-cite("skylab")],
   location: "University of California, Berkeley",
   date: "July 2025 - December 2025",
-  description: [Research Intern, advised by #link("https://people.eecs.berkeley.edu/~istoica/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Prof. Ion Stoica]]; \
-    #v(-0.7em)worked with #link("https://people.eecs.berkeley.edu/~jegonzal/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Prof. Joseph E. Gonzalez]], #link("https://people.eecs.berkeley.edu/~matei/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Prof. Matei Zaharia]]],
+  description: [Research Intern, advised by Prof. Ion Stoica #ref-cite("stoica"); \
+    #v(-0.7em)worked with Prof. Joseph E. Gonzalez #ref-cite("gonzalez"), Prof. Matei Zaharia #ref-cite("zaharia")],
 )
 
 #resume-item[
@@ -203,7 +236,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
 
-    - Achieved 97% storage reduction, \<5% latency impact; led open-source implementation to #link(<leann-project>)[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[4,000+ GitHub stars]]
+    - Achieved 97% storage reduction, \<5% latency impact; led open-source implementation to 4,000+ GitHub stars #ref-cite("leann-github")
 
     - Built the system extending `FAISS` C++, contributing 70\% codebase; drove evaluation efforts
 
@@ -221,8 +254,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 
 
 #resume-entry(
-  title: underline()[University of California, Berkeley],
-  title-link: "https://www.berkeley.edu",
+  title: [University of California, Berkeley #ref-cite("berkeley")],
   location: "Berkeley, CA, USA",
   date: "August 2024 - December 2024",
   description: "Exchange Student, Computer Science",
@@ -231,7 +263,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-item[
   // overlapped.
   #v(0.3em)
-  - *#link("https://ucbsky.github.io/aisys-fa2024/schedule/")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[CS294-162 Machine Learning Systems]] graduate seminar*
+  - *CS294-162 Machine Learning Systems #ref-cite("cs294") graduate seminar*
 
     - Optimized complex DAG workload execution through intelligent data placement and cross-cloud task scheduling
 
@@ -240,12 +272,10 @@ I am also interested exploring in how AI techniques can advance systems design.
 ]
 
 #resume-entry(
-  title: [#link(
-      "https://www.ruc.edu.cn/",
-    )[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[Renmin University of China]] #h(6pt) #text(
+  title: [Renmin University of China #ref-cite("ruc") #h(6pt) #text(
       size: 8.5pt,
       fill: gray.darken(20%),
-    )[(Ranked #text(weight: 900)[23rd] globally on #link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[CSRankings 2025]])]],
+    )[(Ranked #text(weight: 900)[23rd] globally on CSRankings 2025 #ref-cite("csrankings"))]],
   location: "Beijing, China",
   date: "September 2022 - June 2026 (Expected)",
   description: [Bachelor's in Computer Science, #strong("Turing Honors Class")],
@@ -303,7 +333,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Joseph Gonzalez",
   )],
   venue: "MLSys '26 (in submission)",
-  pdf-url: "https://arxiv.org/abs/2506.08276",
+  pdf-ref: "leann-arxiv",
 )
 
 #metadata("barbarians-ref") <barbarians-paper>
@@ -321,7 +351,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Ion Stoica",
   )],
   venue: "OSDI '26 (in submission)",
-  pdf-url: "https://arxiv.org/abs/2510.06189",
+  pdf-ref: "barbarians-arxiv",
 )
 
 #metadata("frontiercs-ref") <frontiercs-paper>
@@ -339,7 +369,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Alvin Cheung",
   )],
   venue: "arXiv",
-  website-url: "https://frontier-cs.org/",
+  website-ref: "frontiercs",
 )
 
 #resume-publication(
@@ -355,7 +385,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Ion Stoica",
   )],
   venue: "EuroSys 2026",
-  pdf-url: "https://arxiv.org/abs/2505.24095v2",
+  pdf-ref: "skywalker-arxiv",
 )
 
 // #label("checkpoint")
@@ -374,24 +404,22 @@ I am also interested exploring in how AI techniques can advance systems design.
 
 #metadata("leann-project-ref") <leann-project>
 #resume-entry(
-  title: "LEANN: the Smallest Vector Index in the World",
-  title-link: "https://github.com/yichuan-w/LEANN",
-  location: gh_repo("yichuan-w/LEANN", stars: "4.5k", label: "LEANN"),
+  title: [LEANN: the Smallest Vector Index in the World #ref-cite("leann-github")],
+  location: gh_repo("yichuan-w/LEANN", stars: "4.5k", label: "LEANN", ref-key: "leann-github"),
   date: "September 2024 - Present",
   description: "Enjoy 97% storage savings for RAG application on your personal device",
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #link("https://github.com/yichuan-w/LEANN")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[4,000+ GitHub stars]] with 20 active external contributors and 40k+ downloads
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to 4,000+ GitHub stars with 20 active external contributors and 40k+ downloads
 
   - Drove technical outreach including blog posts social media campaign achieving 600k+ views
 ]
 
 #metadata("skypilot-project-ref") <skypilot-project>
 #resume-entry(
-  title: "SkyPilot: Run AI on Any Infra",
-  title-link: "https://github.com/skypilot-org/skypilot",
-  location: gh_repo("skypilot-org/skypilot", stars: "9.0k", label: "SkyPilot"),
+  title: [SkyPilot: Run AI on Any Infra #ref-cite("skypilot-github")],
+  location: gh_repo("skypilot-org/skypilot", stars: "9.0k", label: "SkyPilot", ref-key: "skypilot-github"),
   date: "September 2024 - Present",
   description: "Framework for running ML/AI workloads across any cloud infrastructure",
 )
@@ -399,7 +427,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-item[
   - Top 10 contributor; created 70+ issues and merged 50+ pull requests; contributed 30,000+ lines of code changes
 
-  - Implemented #link("https://docs.skypilot.co/en/latest/serving/sky-serve.html#high-availability")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[High Availability Controller]] for SkyServe control plane; adopted by startups including Hypermode, IP Copilot and Liner
+  - Implemented High Availability Controller #ref-cite("skyserve-ha") for SkyServe control plane; adopted by startups including Hypermode, IP Copilot and Liner
 ]
 
 // #linebreak()
@@ -458,18 +486,6 @@ I am also interested exploring in how AI techniques can advance systems design.
     #resume-certification(title, date)
   ]
 }
-
-#resume-award-entry(
-  title: [#text(
-      style: "italic",
-      weight: "regular",
-    )[#strong("First Place"), National System Capability Competition] #text(
-      size: 9pt,
-      fill: gray.darken(20%),
-      weight: "light",
-    )[(among #strong("10,000") from 1,200 schools)]],
-  date: "November 2025",
-)
 
 #resume-award-entry(
   title: [#text(style: "italic", weight: "regular")[Elite Collegiate Award, China Computer Federation] #text(
@@ -588,3 +604,6 @@ I am also interested exploring in how AI techniques can advance systems design.
 //   "Soft Skills",
 //   ("Structured Thinking", "Startup Ecosystem Navigation", "Hyperfocus Workflow", "Rapid Insight Distillation"),
 // )
+
+// References page with full URLs
+#references-page()

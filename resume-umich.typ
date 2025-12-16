@@ -1,3 +1,6 @@
+// Resume for University of Michigan
+// Usage: typst compile resume-umich.typ resume-umich.pdf
+
 // #import "@local/modern-cv:0.7.0": *
 #import "modern-cv/lib.typ": *
 
@@ -156,6 +159,17 @@
 #set par(spacing: 1.1em)
 // #set par(leading: 0.99em)
 #show list: set par(spacing: 0.85em, leading: 0.6em)
+
+// UMich-specific header
+#align(center)[
+  #text(size: 14pt, weight: "bold")[Curriculum Vitae/Resume]
+  #v(0.3em)
+  #text(size: 12pt, weight: "bold")[Zhifei (Andy) Li]
+  #v(0.2em)
+  #text(size: 11pt)[Computer Science and Engineering PhD Program]
+]
+
+#v(0.5em)
 
 = Research Interests
 
