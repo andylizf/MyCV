@@ -339,6 +339,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Alvin Cheung",
   )],
   venue: "arXiv",
+  pdf-url: "https://arxiv.org/abs/2512.15699",
   website-url: "https://frontier-cs.org/",
 )
 
