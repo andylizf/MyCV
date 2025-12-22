@@ -278,8 +278,9 @@ I am also interested exploring in how AI techniques can advance systems design.
   authors: [#format-authors(
     "me*",
     "Tian Xia*",
-    "Zihan Zhou",
     "Ziming Mao",
+    "Zihan Zhou",
+    "Zhanghao Wu",
     "Yi Xu",
     "Yifan Qiao",
     "Scott Shenker",
@@ -377,13 +378,13 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-entry(
   title: "LEANN: the Smallest Vector Index in the World",
   title-link: "https://github.com/yichuan-w/LEANN",
-  location: gh_repo("yichuan-w/LEANN", stars: "4.5k", label: "LEANN"),
+  location: gh_repo("yichuan-w/LEANN", stars: "5.2k", label: "LEANN"),
   date: "September 2024 - Present",
   description: "Enjoy 97% storage savings for RAG application on your personal device",
 )
 
 #resume-item[
-  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #link("https://github.com/yichuan-w/LEANN")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[4,000+ GitHub stars]] with 20 active external contributors and 40k+ downloads
+  - Led research-to-production translation of @leann-paper from prototype to production-ready open-source Python package with CI/CD pipeline, grew to #link("https://github.com/yichuan-w/LEANN")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[5,000+ GitHub stars]] with 20 active external contributors and 40k+ downloads
 
   - Drove technical outreach including blog posts social media campaign achieving 600k+ views
 ]
@@ -392,7 +393,7 @@ I am also interested exploring in how AI techniques can advance systems design.
 #resume-entry(
   title: "SkyPilot: Run AI on Any Infra",
   title-link: "https://github.com/skypilot-org/skypilot",
-  location: gh_repo("skypilot-org/skypilot", stars: "9.0k", label: "SkyPilot"),
+  location: gh_repo("skypilot-org/skypilot", stars: "9.1k", label: "SkyPilot"),
   date: "September 2024 - Present",
   description: "Framework for running ML/AI workloads across any cloud infrastructure",
 )
