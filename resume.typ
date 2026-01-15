@@ -287,6 +287,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Ion Stoica",
   )],
   venue: "OSDI '26 (in submission)",
+  pdf-url: "https://arxiv.org/abs/2601.06520",
 )
 
 #metadata("leann-ref") <leann-paper>
@@ -303,7 +304,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Matei Zaharia",
     "Joseph Gonzalez",
   )],
-  venue: "MLSys '26 (in submission)",
+  venue: "MLSys '26 (to appear)",
   pdf-url: "https://arxiv.org/abs/2506.08276",
 )
 
@@ -339,7 +340,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Zhuang Liu",
     "Alvin Cheung",
   )],
-  venue: "arXiv",
+  venue: "ICML '26 (in submission)",
   pdf-url: "https://arxiv.org/abs/2512.15699",
   website-url: "https://frontier-cs.org/",
 )
