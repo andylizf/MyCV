@@ -199,7 +199,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     - Led project from research formulation to production, drove methodology design, and built simulation framework
 
     #v(0.4em)
-  - *@leann-paper: Storage-Efficient Compound AI Systems* (submitted to #strong("MLSys '26"))
+  - *@leann-paper: Storage-Efficient Compound AI Systems* (#strong("MLSys '26"))
 
     - Co-designed a two-level recompute algorithm to cut vector index storage overhead in RAG pipelines
 
@@ -247,7 +247,7 @@ I am also interested exploring in how AI techniques can advance systems design.
       fill: gray.darken(20%),
     )[(Ranked #text(weight: 900)[23rd] globally on #link("https://csrankings.org/#/fromyear/2025/toyear/2025/index?all&world")[#underline(evade: false, stroke: 0.5pt, offset: 0.2em, extent: -1pt)[CSRankings 2025]])]],
   location: "Beijing, China",
-  date: "September 2022 - June 2026 (Expected)",
+  date: "September 2022 - Expected: 06/26",
   description: [Bachelor's in Computer Science, #strong("Turing Honors Class")],
 )
 
@@ -304,7 +304,7 @@ I am also interested exploring in how AI techniques can advance systems design.
     "Matei Zaharia",
     "Joseph Gonzalez",
   )],
-  venue: "MLSys '26 (to appear)",
+  venue: "MLSys '26",
   pdf-url: "https://arxiv.org/abs/2506.08276",
 )
 
